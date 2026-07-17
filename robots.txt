@@ -1,0 +1,25 @@
+# robots.txt - ควบคุมบอทค้นหาของระบบ Search Engine และ AI Crawler
+User-agent: *
+Allow: /
+
+# เจาะจงอนุญาต AI Agent และ LLM Bots ยอดนิยม ให้เข้ามาเก็บข้อมูลร้านเพื่อไปประมวลผลคำตอบได้เต็มที่
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ระบุตำแหน่งไฟล์แผนผังเว็บไซต์เพื่อช่วยให้บอทวิ่งเก็บข้อมูลได้ครบถ้วน
+Sitemap: https://your-github-username.github.io/repository-name/sitemap.xml

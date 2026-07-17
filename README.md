@@ -1,2 +1,32 @@
-# notebookrepairchiangmai
-Official website of Notebook Laptop Repair Chiang Mai. Modern, fast, SEO-optimized, AI-friendly website for professional laptop and motherboard repair services in Chiang Mai, Thailand.
+# 💻 โครงสร้างเว็บร้านซ่อมโน๊ตบุ๊คเชียงใหม่ (AI & SEO Optimized)
+
+โปรเจกต์นี้เป็นเว็บไซต์หน้าเดียว (Single Page Application) ที่พัฒนาด้วยสถาปัตยกรรม **Bootstrap 5** ออกแบบมาเพื่อให้ **Google Search Bot** และ **AI Crawler (ChatGPT, Claude, Gemini)** สามารถอ่านข้อมูล เข้าใจบริบทของร้าน และดึงไปตอบคำถามลูกค้าได้อย่างสมบูรณ์แบบที่สุด
+
+---
+
+## 🛠️ รายการจุดตรวจที่ต้องแก้ไขก่อนใช้งานจริง (Checklist)
+
+เปิดไฟล์ต่างๆ ใน Text Editor (เช่น VS Code) แล้วค้นหาคำเพื่อเปลี่ยนเป็นข้อมูลจริงของคุณดังนี้ครับ:
+
+1. **ในไฟล์ `index.html`, `sitemap.xml` และ `robots.txt`:**
+   - ค้นหาคำว่า `https://your-github-username.github.io/repository-name` แล้วเปลี่ยนเป็น URL ของ GitHub Pages หรือโดเมนจริงของคุณ
+2. **ลิงก์ Line Official ใน `index.html`:**
+   - ที่ปุ่ม Line ค้นหา `<a href="#"` เปลี่ยนเครื่องหมาย `#` ให้เป็นลิงก์เพิ่มเพื่อนของร้านคุณจริง (เช่น `https://lin.ee/xxxxxx`)
+3. **แผนที่ร้านใน `index.html`:**
+   - ค้นหาคอมเมนต์ `<!-- แผนที่ร้านหมุด Google Maps -->` ในโค้ด แล้วนำโค้ด `<iframe src="...">` ที่ได้จากการแชร์ผ่าน Google Maps มาวางแทนที่บล็อกตัวอย่าง เพื่อให้ลูกค้ากดดูแผนที่และนำทางได้ทันที
+4. **รูปภาพผลงานและรูปภาพประกอบ:**
+   - นำไฟล์ภาพตัวอย่างผลงานก่อนซ่อม-หลังซ่อมของคุณมาใส่แทนลิงก์ภาพจาก Unsplash โดยอย่าลืมตั้งชื่อไฟล์เป็นภาษาอังกฤษแนวคีย์เวิร์ดตามคำแนะนำในข้อความก่อนหน้านี้
+
+---
+
+## 🚀 วิธีการ Deploy ขึ้น GitHub Pages (ฟรี 100%)
+
+หลังจากแก้ไขข้อมูลเรียบร้อยแล้ว คุณสามารถเปิดใช้งานหน้าเว็บจริงได้ฟรีผ่าน GitHub ด้วยขั้นตอนต่อไปนี้:
+
+1. สมัครใช้งานหรือเข้าสู่ระบบที่ [GitHub.com](https://github.com)
+2. กดสร้างโปรเจกต์ใหม่ (**Create a new repository**) ตั้งชื่อตามต้องการ เช่น `notebook-repair-chiangmai`
+3. อัปโหลดไฟล์ทั้งหมดในโฟลเดอร์นี้ขึ้นไป (`index.html`, `styles.css`, `script.js`, `robots.txt`, `llms.txt`, `sitemap.xml`) ไว้ที่ Root นอกสุดของ Repository
+4. ไปที่เมนู **Settings** (ตั้งค่า) ของคลังโปรเจกต์นั้น -> เลือกหัวข้อ **Pages** ที่แถบเมนูด้านซ้าย
+5. ในส่วนของ **Build and deployment** -> ตรงหัวข้อ **Source** ให้เลือกเป็น `Deploy from a branch`
+6. ตรงหัวข้อ **Branch** ให้เลือกสาขาเป็น `main` (หรือ `master`) และโฟลเดอร์เป็น `/ (root)` แล้วกด **Save**
+7. รอระบบประมวลผลประมาณ 1-2 นาที คุณจะได้ URL เว็บไซต์ที่เป็นระบบ HTTPS ทันที เช่น `https://your-username.github.io/notebook-repair-chiangmai/` สามารถนำลิงก์นี้ไปส่งให้ Google หรือกระจายให้ AI รู้จักได้เลยครับ!

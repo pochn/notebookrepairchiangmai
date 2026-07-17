@@ -1,0 +1,132 @@
+/* custom styles for Notebook Repair Web SEO & AI optimized */
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.text-primary-light {
+    color: #66b2ff;
+}
+
+.bg-black {
+    background-color: #0b0f19 !important;
+}
+
+.bg-dark {
+    background-color: #111827 !important;
+}
+
+/* Hero design matching Web.png vibe */
+.hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+
+
+.hero-image-wrapper{
+    position:relative;
+    display:inline-block;
+}
+
+.hero-image{
+    width:100%;
+    max-width:650px;
+    border-radius:24px;
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.15);
+    transition:.3s ease;
+}
+
+.hero-image:hover{
+    transform:translateY(-4px);
+}
+
+.experience-badge{
+    position:absolute;
+    top:-20px;
+    right:-20px;
+
+    width:110px;
+    height:110px;
+
+    background:#ffc107;
+    border:4px solid #0d6efd;
+
+    border-radius:50%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    color:#111;
+    font-weight:700;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.experience-badge span{
+    font-size:12px;
+}
+
+.experience-badge strong{
+    font-size:32px;
+    line-height:1;
+} 
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: radial-gradient(#3b82f6 1px, transparent 1px);
+    background-size: 16px 16px;
+    z-index: 1;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-divider {
+    height: 4px;
+    width: 60px;
+}
+
+/* Badges & Enhancements */
+.badge-experience {
+    width: 90px;
+    height: 90px;
+    top: -15px;
+    right: -15px;
+    border: 4px solid #111827;
+    z-index: 10;
+}
+
+/* Service Card hover */
+.service-card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6 !important;
+}
+
+/* Utility space-y workaround for native Bootstrap */
+.space-y-3 > * + * {
+    margin-top: 0.75rem;
+}
+
+.hover-white:hover {
+    color: #ffffff !important;
+}
+/* คอนโทรลภาพพื้นหลังสำหรับหน้าจอมือถือ */
+@media (max-width: 991.98px) {
+    #hero {
+        background-position: 80% center !important; /* เลื่อนสัดส่วนภาพหลบไปฝั่งขวาเพิ่มขึ้นบนมือถือ */
+    }
+    #hero .position-absolute {
+        background: linear-gradient(to bottom, rgba(10, 15, 30, 0.95) 70%, rgba(10, 15, 30, 0.75) 100%) !important;
+        /* ปรับเฉดสีจากบนลงล่างบนมือถือ เพื่อให้มองเห็นองค์ประกอบของคอมพิวเตอร์ลางๆ ด้านล่าง แต่ตัวหนังสือด้านบนยังคงอ่านง่ายชัดเจน */
+    }
+}
