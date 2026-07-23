@@ -131,6 +131,16 @@ background-position:68% center!important;
 
 }
 
+/* เอฟเฟกต์ลอยตัวเมื่อ Hover การ์ดผลงาน */
+.card-hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
 #hero .position-absolute{
 
 background:linear-gradient(

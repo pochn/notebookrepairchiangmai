@@ -119,7 +119,7 @@ rgba(9,18,35,0) 82%);
                     </h1>
                     
                     <p class="text-light opacity-75 fs-6 mb-4" style="line-height: 1.6;">
-                        บริการซ่อมโน๊ตบุ๊ค PC และ Gaming คอมพิวเตอร์ประกอบ ครบวงจรในเชียงใหม่ แก้ไขตรงจุดด้วยเครื่องมือมาตรฐาน ตรวจเช็คอาการฟรี ประเมินราคาก่อนซ่อม รับประกันหลังงานซ่อม
+                        บริการซ่อมโน๊ตบุ๊ค PC และ Gaming คอมพิวเตอร์ประกอบ ครบวงจรในเชียงใหม่ และ ที่ส่งซ่อม Online  แก้ไขตรงจุดด้วยเครื่องมือมาตรฐาน ตรวจเช็คอาการฟรี ประเมินราคาก่อนซ่อม รับประกันหลังงานซ่อม
                     </p>
 
                     <!-- รายการจุดเด่น (Bullets) -->
@@ -217,36 +217,82 @@ rgba(9,18,35,0) 82%);
         </div>
     </section>
 
-    <!-- Before/After Case Section -->
-    <section id="portfolio" class="bg-light py-5">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-dark mb-2">ผลงานซ่อม ก่อนซ่อม - หลังซ่อม</h2>
-                <div class="section-divider bg-primary mx-auto rounded"></div>
+   <!-- Portfolio Section -->
+<section id="portfolio" class="py-5 bg-light">
+    <div class="container py-4">
+        
+        <!-- หัวข้อส่วนผลงานซ่อม -->
+        <div class="text-center mb-5">
+            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 rounded-pill small mb-2">
+                <i class="fa-solid fa-wrench me-1"></i> CASE STUDY
+            </span>
+            <h2 class="fw-bold text-dark fs-2">ผลงานซ่อมจริง (ก่อนซ่อม - หลังซ่อม)</h2>
+            <p class="text-secondary small">รวมตัวอย่างเคสงานซ่อมคอมพิวเตอร์และโน๊ตบุ๊คจากลูกค้าที่ส่งซ่อม</p>
+        </div>
+
+        <!-- รายการการ์ดผลงานซ่อม (Grid Responsive) -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- การ์ดที่ 1: เคส Lenovo Ideapad 320S (ลิงก์ไปหน้าบทความที่เราเพิ่งทำ) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-hover" style="transition: transform 0.2s, shadow 0.2s;">
+                    <!-- รูปปกการ์ด (นำรูปหลังซ่อมมาแสดง) -->
+                    <div class="position-relative overflow-hidden" style="height: 220px;">
+                        <img src="images/Lenovo/lenovo-320s/lenovo-320s-repair-complete-display.png" class="card-img-top w-100 h-100" alt="ซ่อม Lenovo Ideapad 320S เปิดไม่ติด" style="object-fit: cover;">
+                        <span class="position-absolute top-0 start-0 bg-danger text-white small fw-bold px-3 py-1 m-3 rounded-pill shadow-sm">
+                            <i class="fa-solid fa-bolt me-1"></i> บอร์ดช็อต
+                        </span>
+                    </div>
+                    
+                    <!-- รายละเอียดการ์ด -->
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="text-muted small mb-2">
+                            <i class="fa-solid fa-laptop me-1"></i> Lenovo Ideapad 320S
+                        </div>
+                        <h3 class="card-title h5 fw-bold text-dark mb-3" style="line-height: 1.4;">
+                            อาการเปิดไม่ติด ไฟไม่เข้า ช็อตภาคจ่ายไฟ GPU
+                        </h3>
+                        <p class="card-text text-secondary small mb-4 flex-grow-1" style="line-height: 1.6;">
+                            ตรวจเช็คพบ MOSFET ภาคจ่ายไฟการ์ดจอช็อตลงกราว ทำการยกเปลี่ยนอะไหล่ใหม่ รัน Stress Test ผ่านเรียบร้อย...
+                        </p>
+                        
+                        <!-- ปุ่มลิงก์เชื่อมไปหน้าบทความ -->
+                        <a href="lenovo-320s-power-on-repair-chiangmai.html" class="btn btn-outline-primary rounded-pill w-100 fw-bold d-flex align-items-center justify-content-center gap-2">
+                            อ่านเคสซ่อมนี้ <i class="fa-solid fa-arrow-right fs-6"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-5">
-                    <figure class="figure border p-3 bg-white rounded-4 shadow-sm w-100">
-                        <img src="https://images.unsplash.com/photo-1601524909162-be87252be298?q=80&w=500&auto=format&fit=crop" 
-                             class="figure-img img-fluid rounded-3 w-100" style="height: 250px; object-fit: cover;" alt="บอดี้เคสคอมพิวเตอร์และโน๊ตบุ๊คหักพังก่อนซ่อม">
-                        <figcaption class="figure-caption text-danger fw-bold mt-2">
-                            <i class="fa-solid fa-triangle-exclamation"></i> ก่อนซ่อม: สภาพบอดี้แตกหักเสียหาย ฝาพับหักงอ
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-5">
-                    <figure class="figure border p-3 bg-white rounded-4 shadow-sm w-100">
-                        <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=500&auto=format&fit=crop" 
-                             class="figure-img img-fluid rounded-3 w-100" style="height: 250px; object-fit: cover;" alt="ซ่อมบอดี้เปลี่ยนเคสคอมพิวเตอร์เสร็จสมบูรณ์หลังซ่อม">
-                        <figcaption class="figure-caption text-success fw-bold mt-2">
-                            <i class="fa-solid fa-circle-check"></i> หลังซ่อม: ดำเนินการแก้ไขซ่อมเปลี่ยนอะไหล่เนียนสนิท 100%
-                        </figcaption>
-                    </figure>
+            <!-- การ์ดที่ 2: เคสตัวอย่างอื่นๆ (สำหรับเพิ่มในอนาคต) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="position-relative overflow-hidden" style="height: 220px;">
+                        <img src="images/blog/case2-cover.jpg" class="card-img-top w-100 h-100" alt="ซ่อมโน๊ตบุ๊คโดนน้ำ" style="object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x250?text=Notebook+Repair'">
+                        <span class="position-absolute top-0 start-0 bg-primary text-white small fw-bold px-3 py-1 m-3 rounded-pill shadow-sm">
+                            <i class="fa-solid fa-droplet me-1"></i> เครื่องโดนน้ำ
+                        </span>
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="text-muted small mb-2">
+                            <i class="fa-solid fa-laptop me-1"></i> ASUS TUF Gaming F15
+                        </div>
+                        <h3 class="card-title h5 fw-bold text-dark mb-3" style="line-height: 1.4;">
+                            น้ำหวานหกใส่คีย์บอร์ด บอร์ดช็อตเปิดไม่ติด
+                        </h3>
+                        <p class="card-text text-secondary small mb-4 flex-grow-1" style="line-height: 1.6;">
+                            ดำเนินการแกะล้างบอร์ดด้วยน้ำยาเฉพาะ ไล่ความชื้น เปลี่ยนชิปไอซีชาร์จที่เสียหาย คืนชีพกลับมาใช้งานได้ปกติ...
+                        </p>
+                        <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-bold d-flex align-items-center justify-content-center gap-2">
+                            อ่านเคสซ่อมนี้ <i class="fa-solid fa-arrow-right fs-6"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Google Maps Reviews Section (ถอดดีไซน์ตามเรฟเฟอเรนซ์เป๊ะๆ) -->
     <section id="reviews" class="py-5" style="background-color: #f8f9fa;">
