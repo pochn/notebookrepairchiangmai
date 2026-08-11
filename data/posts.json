@@ -1,6 +1,14 @@
 {
   "repairs": [
     {
+      "id": "repair-9899",
+      "brand": "GL542LI-HN053T",
+      "title": "GL542LI-HN053T",
+      "symptom": "คีย์บอร์ดกดไม่ได้บางปุ่ม คีย์บอร์ดเสีย",
+      "image": "https://lh3.googleusercontent.com/d/1YI-Y47yXEWXexL83tgBwt4fZd5Wc9mkf",
+      "link": "gl542li-hn053t-repair.html"
+    },
+    {
       "id": "repair-1",
       "brand": "Lenovo",
       "title": "Lenovo Ideapad 320S",
