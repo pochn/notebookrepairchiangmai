@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- แผนผังระบุโครงสร้างหน้าเว็บหลักให้ Google Search Console เข้ามาสแกน -->
-    <url>
-        <loc>https://pochn.github.io/notebookrepairchiangmai//</loc>
-        <lastmod>2026-07-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+  <!-- หน้าหลัก Landing Page -->
+  <url>
+    <loc>https://pochn.github.io/notebookrepairchiangmai/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- หน้าดักคีย์บอร์ดซ่อมเฉพาะทาง -->
+  <url>
+    <loc>https://pochn.github.io/notebookrepairchiangmai/index.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

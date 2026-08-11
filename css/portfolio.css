@@ -1,0 +1,108 @@
+/* ==========================================
+   Phase 4: News/Magazine Style Portfolio Cards
+   ========================================== */
+
+.portfolio-card {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(255, 123, 0, 0.3);
+}
+
+.portfolio-img-container {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    background-color: #0b132b;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-img {
+    transform: scale(1.08);
+}
+
+/* Brand Badge On Image */
+.portfolio-brand-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(11, 19, 43, 0.85);
+    color: #ff9d42;
+    border: 1px solid rgba(255, 123, 0, 0.4);
+    backdrop-filter: blur(6px);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Status Badge */
+.portfolio-status-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(32, 201, 151, 0.9);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.portfolio-body {
+    padding: 16px;
+}
+
+.portfolio-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.portfolio-symptom {
+    font-size: 0.825rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.portfolio-btn {
+    border-color: #e2e8f0;
+    color: #334155;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.portfolio-card:hover .portfolio-btn {
+    background-color: #ff7b00;
+    border-color: #ff7b00;
+    color: #ffffff;
+}

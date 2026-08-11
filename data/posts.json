@@ -1,0 +1,66 @@
+{
+  "repairs": [
+    {
+      "id": "repair-1",
+      "brand": "Lenovo",
+      "title": "Lenovo Ideapad 320S",
+      "symptom": "อาการเปิดไม่ติด ไฟไม่เข้า เปลี่ยน MOSFET คาปาช็อต",
+      "image": "images/Lenovo/lenovo-320s/lenovo-320s-repair-complete-display.webp",
+      "link": "lenovo-320s-power-on-repair-chiangmai.html"
+    },
+    {
+      "id": "repair-2",
+      "brand": "ACER",
+      "title": "ACER Aspire F5-573G",
+      "symptom": "ภาพไม่ขึ้นหน้าจอ (จอดำสนิท)",
+      "image": "images/ACER/F5-573G/acer-f5-573g-repair-complete-display.webp",
+      "link": "acer-f5-573g-screen-repair-chiangmai.html"
+    },
+    {
+      "id": "repair-3",
+      "brand": "ACER",
+      "title": "ACER Nitro 5",
+      "symptom": "เครื่องทำงานช้า Upgrade SSD พร้อมทำความสะอาดเต็มระบบ ฟรี!",
+      "image": "images/ACER/Nitro-5-Upgrading-SSD/Upgrading-a-laptop-acer-SSD.webp",
+      "link": "acer-nitro-5-an515-upgrade-ssd-m2-chiangmai.html"
+    },
+    {
+      "id": "repair-4",
+      "brand": "Dell",
+      "title": "Dell Vostro 3750",
+      "symptom": "จอมีอาการสั่น มีเส้นขึ้นด้านล่างของจอ",
+      "image": "images/DELL/Dell-Vostro/dell-vostro-3750-screen-replacement-chiangmai.webp",
+      "link": "dell-vostro-3750-screen-replacement-chiangmai.html"
+    }
+  ],
+  "articles": [
+    {
+      "id": "art-1",
+      "title": "อัพเกรด SSD M.2 เพิ่มความเร็ว Acer Nitro 5 AN515 พร้อมทำความสะอาดพัดลม & เปลี่ยนซิลิโคนระบายความร้อนเต็มระบบ",
+      "date": "15 ก.ค. 2026",
+      "image": "images/ACER/Nitro-5-Upgrading-SSD/Upgrading-a-laptop-acer-SSD.webp",
+      "link": "acer-nitro-5-an515-upgrade-ssd-m2-chiangmai.html"
+    },
+    {
+      "id": "art-2",
+      "title": "อาการโน๊ตบุ๊คเปิดไม่ติด เกิดจากอะไรได้บ้าง?",
+      "date": "10 ก.ค. 2026",
+      "image": "images/articles/power-on-issues.webp",
+      "link": "article-power-issues.html"
+    },
+    {
+      "id": "art-3",
+      "title": "SSD กับ HDD ต่างกันอย่างไร เลือกแบบไหนดีกว่ากัน",
+      "date": "5 ก.ค. 2026",
+      "image": "images/articles/ssd-vs-hdd.webp",
+      "link": "article-ssd-vs-hdd.html"
+    },
+    {
+      "id": "art-4",
+      "title": "รวมปัญหาโน๊ตบุ๊คยอดฮิต ที่พบบ่อยและวิธีแก้ไข",
+      "date": "1 ก.ค. 2026",
+      "image": "images/articles/common-problems.webp",
+      "link": "article-common-problems.html"
+    }
+  ]
+}

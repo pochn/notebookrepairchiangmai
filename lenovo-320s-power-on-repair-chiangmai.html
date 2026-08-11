@@ -3,316 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Optimization Title & Meta Description -->
-    <title>ซ่อม Lenovo Ideapad 320S อาการเปิดไม่ติด ไฟไม่เข้า เปลี่ยน MOSFET การ์ดจอ | Notebook Repair CM</title>
-    <meta name="description" content="เคสซ่อมจริง Lenovo Ideapad 320S อาการเปิดไม่ติด ไฟไม่เข้า ตรวจเช็คพบ MOSFET ภาคจ่ายไฟการ์ดจอ (GPU) ช็อต ดำเนินการยกเปลี่ยนอะไหล่ใหม่ เครื่องกลับมาเปิดติดใช้งานได้ปกติ ร้านซ่อมโน๊ตบุ๊คเชียงใหม่ สารภี">
-    <meta name="keywords" content="ซ่อมโน๊ตบุ๊คเชียงใหม่, ซ่อม Lenovo Ideapad 320S, โน๊ตบุ๊คเปิดไม่ติด, ซ่อมเมนบอร์ดโน๊ตบุ๊ค, เปลี่ยน MOSFET การ์ดจอ, ซ่อมโน๊ตบุ๊คสารภี">
+    <title>ซ่อม Lenovo Ideapad 320S เปิดไม่ติด / ไฟไม่เข้า รับประกันงานซ่อม - ซ่อมโน๊ตบุ๊ค เชียงใหม่ | Notebook Repair CM</title>
+    <meta name="description" content="ซ่อม Lenovo Ideapad 320S อาการเปิดไม่ติด ช็อตภาคจ่ายไฟ GPU (เปลี่ยน MOSFET) MOSFET GPU VCORE ช็อต">
     
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/article-detail.css">
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <!-- Navbar Component -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Article Header -->
+    <header class="article-header">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <div class="text-primary fs-2 me-2 d-flex align-items-center">
-                    <i class="fa-solid fa-laptop-medical"></i>
-                </div>
-                <div>
-                    <span class="fw-bold fs-5 text-dark d-block mb-0" style="letter-spacing: -0.5px;">ซ่อมโน๊ตบุ๊คเชียงใหม่</span>
-                    <span class="text-muted d-block fw-light" style="font-size: 11px; letter-spacing: 0.5px; margin-top: -3px;">NOTEBOOK REPAIR CHIANG MAI</span>
-                </div>
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link mx-2 text-dark" href="index.html#home">หน้าแรก</a></li>
-                    <li class="nav-item"><a class="nav-link mx-2 text-dark" href="index.html#services">บริการของเรา</a></li>
-                    <li class="nav-item"><a class="nav-link mx-2 text-dark" href="index.html#portfolio">ผลงานซ่อม</a></li>
-                    <li class="nav-item"><a class="nav-link mx-2 text-dark" href="index.html#faq">คำถามที่พบบ่อย</a></li>
-                    <li class="nav-item"><a class="nav-link mx-2 text-dark" href="index.html#contact">ติดต่อเรา</a></li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a href="tel:063-594-2636" class="btn btn-primary rounded-pill px-4">
-                            <i class="fa-solid fa-phone me-1"></i> ติดต่อสอบถาม
-                        </a>
-                    </li>
-                </ul>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-2 small">
+                    <li class="breadcrumb-item"><a href="index.html">หน้าแรก</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#portfolio">ผลงานซ่อม</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Lenovo Ideapad 320S</li>
+                </ol>
+            </nav>
+            
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-2.5 py-1">
+                    <i class="fa-solid fa-wrench me-1"></i> ซ่อมเมนบอร์ด
+                </span>
+                <span class="text-muted small"><i class="fa-solid fa-check-circle text-success me-1"></i> ซ่อมสำเร็จ</span>
             </div>
+            
+            <h1 class="fw-bold text-dark mb-0 fs-2" style="letter-spacing: -0.5px;">ซ่อม Lenovo Ideapad 320S อาการเปิดไม่ติด ช็อตภาคจ่ายไฟ GPU (เปลี่ยน MOSFET)</h1>
         </div>
-    </nav>
+    </header>
 
     <!-- Main Content -->
-    <main class="py-5 bg-light">
-        <div class="container py-2">
-            
-            <div class="mb-4">
-                <a href="index.html#portfolio" class="text-decoration-none text-muted small fw-medium">
-                    <i class="fa-solid fa-arrow-left me-1"></i> ย้อนกลับไปหน้าผลงานทั้งหมด
-                </a>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-9 col-xl-8">
-                    <article class="bg-white p-4 p-md-5 rounded-4 shadow-sm border border-light">
+    <main class="py-5 bg-light-subtle">
+        <div class="container">
+            <div class="row g-4">
+                
+                <!-- Content Area -->
+                <div class="col-lg-8">
+                    <article class="article-main-card">
                         
-                        <!-- Header บทความ -->
-                        <div class="mb-4">
-                            <div class="d-flex align-items-center gap-2 mb-2">
-                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-1 rounded-pill small">
-                                    <i class="fa-solid fa-wrench me-1"></i> เคสซ่อมจริง
-                                </span>
-                                <span class="text-muted small"><i class="fa-regular fa-calendar me-1"></i> กรกฎาคม 2026</span>
+                        <!-- Summary Highlight Box -->
+                        <div class="article-highlight-box mb-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <strong class="text-dark d-block mb-1">
+                                        <i class="fa-solid fa-laptop text-primary me-1.5"></i>รุ่นโน๊ตบุ๊ค
+                                    </strong>
+                                    <span class="text-dark fw-bold">Lenovo Ideapad 320S</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <strong class="text-dark d-block mb-1">
+                                        <i class="fa-solid fa-triangle-exclamation text-warning me-1.5"></i>อาการเสีย
+                                    </strong>
+                                    <span class="text-secondary small">เปิดไม่ติด / ไฟไม่เข้า</span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <strong class="text-dark d-block mb-1">
+                                        <i class="fa-solid fa-circle-check text-success me-1.5"></i>แนวทางแก้ไข
+                                    </strong>
+                                    <span class="text-secondary small">MOSFET GPU VCORE ช็อต</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <strong class="text-dark d-block mb-1">
+                                        <i class="fa-solid fa-gift text-danger me-1.5"></i>บริการพิเศษ
+                                    </strong>
+                                    <span class="text-success small fw-semibold"><i class="fa-solid fa-circle-plus me-1"></i>ทำความสะอาดปัดฝุ่นพัดลม + หยอดซิลิโคนระบายความร้อนเกรดพรีเมียมฟรี</span>
+                                </div>
                             </div>
-                            
-                            <!-- H1 เน้น Keyword: รุ่น + อาการเสีย + บริการ -->
-                            <h1 class="fw-bold text-dark fs-2 mb-3" style="line-height: 1.3;">
-                                ซ่อม Lenovo Ideapad 320S อาการเปิดไม่ติด ช็อตภาคจ่ายไฟ GPU (เปลี่ยน MOSFET)
-                            </h1>
-                            
-                            <div class="row g-3 mb-4">
-
-    <div class="col-md-4">
-        <div class="border rounded-4 p-3 h-100 bg-light">
-            <small class="text-muted">รุ่นโน๊ตบุ๊ค</small>
-            <div class="fw-bold">Lenovo Ideapad 320S</div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="border rounded-4 p-3 h-100 bg-light">
-            <small class="text-muted">อาการเสีย</small>
-            <div class="fw-bold">
-                เปิดไม่ติด / ไฟไม่เข้า
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="border rounded-4 p-3 h-100 bg-light">
-            <small class="text-muted">สาเหตุที่พบ</small>
-            <div class="fw-bold">
-                MOSFET GPU VCORE ช็อต
-            </div>
-        </div>
-    </div>
-
-</div>
                         </div>
 
-                        <hr class="my-4 text-muted opacity-25">
+                        <!-- Step 1: Before -->
+                        <h2>1. การตรวจเช็คอาการก่อนซ่อม</h2>
+                        <p>ลูกค้าส่งโน๊ตบุ๊ค Lenovo Ideapad 320S เข้ามาด้วยอาการเปิดไม่ติด กดเปิดเครื่องแล้วไม่มีไฟสถานะใดๆ ติดขึ้นมา เสียบสายชาร์จไฟก็ไม่เข้า ช่างจึงทำการแกะฝาหลังเพื่อรื้อฝาเครื่องและถอดแบตเตอรี่ออก จากนั้นทำการจ่ายไฟตรงด้วย DC Power Supply พบว่ามีกระแสไฟตัดการทำงานทันที (Short Circuit) แสดงว่ามีจุดช็อตบนเมนบอร์ด</p>
+                        <div class="my-4 text-center">
+                            <img src="images/Lenovo/lenovo-320s/lenovo-320s-disassembly-board-check.webp" class="img-fluid rounded-3 shadow-sm border" style="max-width: 500px; width: 100%; height: auto;"alt="Lenovo Ideapad 320S ก่อนซ่อม" onerror="this.src='https://placehold.co/700x400/1c2541/ffffff?text=Before+Repair'">
+                        </div>
 
-                        <!-- Section 1: สภาพแรกรับ -->
-                        <section class="mb-5">
-                            <h2 class="h5 fw-bold text-primary mb-3 d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-circle-exclamation text-warning"></i> 1. ตรวจเช็คแรกรับ & วัดไฟเมนบอร์ด (Before)
-                            </h2>
-                            <p class="text-secondary" style="line-height: 1.7;">
-                                ลูกค้าส่งโน๊ตบุ๊ค <strong>Lenovo Ideapad 320S</strong> เข้ามาด้วยอาการเปิดไม่ติด กดเปิดเครื่องแล้วไม่มีไฟสถานะใดๆ ติดขึ้นมา เสียบสายชาร์จไฟก็ไม่เข้า ช่างจึงทำการแกะฝาหลังเพื่อรื้อฝาเครื่องและถอดแบตเตอรี่ออก จากนั้นทำการจ่ายไฟตรงด้วย DC Power Supply พบว่ามีกระแสไฟตัดการทำงานทันที (Short Circuit) แสดงว่ามีจุดช็อตบนเมนบอร์ด
-                            </p>
-                            <figure class="figure my-3 w-100">
-                                <img src="images/Lenovo/lenovo-320s/lenovo-320s-disassembly-board-check.png" class="img-fluid rounded-4 border w-100" alt="แกะเครื่อง Lenovo Ideapad 320S ตรวจเช็คเมนบอร์ด" style="max-height: 450px; object-fit: cover;">
-                                <figcaption class="figure-caption text-center mt-2 small text-muted">ขั้นตอนการรื้อเมนบอร์ด Lenovo Ideapad 320S เพื่อไล่วัดจุดช็อตด้วย Power Supply</figcaption>
-                            </figure>
-                        </section>
+                        <!-- Step 2: Progress -->
+                        <h2>2. ขั้นตอนการซ่อมและแก้ไข</h2>
+                        <p>หลังจากการไล่วงจรไฟหลัก (Main Line) ด้วยเครื่องมือวัดไฟ พบว่าจุดที่ช็อตลงกราวคือ ภาคจ่ายไฟการ์ดจอ (GPU VCORE) โดยมีตัว MOSFET ชิปช็อตเสียหาย ส่งผลให้ไฟเลี้ยงระบบไม่สามารถกระจายไปเลี้ยงส่วนอื่นๆ ได้ ช่างได้ทำการเปลี่ยน MOSFET ที่ช็อตออก จากนั้นนำตัวใหม่ที่มีสเปกตรงตามไดอะแกรมวงจรเข้าเปลี่ยนแทนที่</p>
+                        <div class="my-4 text-center">
+                            <img src="images/Lenovo/lenovo-320s/lenovo-320s-gpu-mosfet-repair.webp" class="img-fluid rounded-3 shadow-sm border" style="max-width: 500px; width: 100%; height: auto;"alt="Lenovo Ideapad 320S ระหว่างซ่อม" onerror="this.src='https://placehold.co/700x400/1c2541/ffffff?text=Repair+In+Progress'">
+                        </div>
 
-                        <!-- Section 2: ขั้นตอนการซ่อม -->
-                        <section class="mb-5">
-                            <h2 class="h5 fw-bold text-primary mb-3 d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-microchip text-primary"></i> 2. ขั้นตอนการซ่อมบอร์ด เปลี่ยน MOSFET ภาคจ่ายไฟ (In Progress)
-                            </h2>
-                            <p class="text-secondary" style="line-height: 1.7;">
-                                หลังจากการไล่วงจรไฟหลัก (Main Line) ด้วยเครื่องมือวัดไฟ พบว่าจุดที่ช็อตลงกราวคือ <strong>ภาคจ่ายไฟการ์ดจอ (GPU VCORE)</strong> โดยมีตัว <strong>MOSFET ชิปช็อตเสียหาย</strong> ส่งผลให้ไฟเลี้ยงระบบไม่สามารถกระจายไปเลี้ยงส่วนอื่นๆ ได้ ช่างได้ทำการเปลี่ยน MOSFET ที่ช็อตออก  จากนั้นนำตัวใหม่ที่มีสเปกตรงตามไดอะแกรมวงจรเข้าเปลี่ยนแทนที่
-                            </p>
-                            <figure class="figure my-3 w-100">
-                                <img src="images/Lenovo/lenovo-320s/lenovo-320s-gpu-mosfet-repair.jpg" class="img-fluid rounded-4 border w-100" alt="เปลี่ยน MOSFET ภาคจ่ายไฟการ์ดจอ Lenovo 320S" style="max-height: 450px; object-fit: cover;">
-                                <figcaption class="figure-caption text-center mt-2 small text-muted">จุดที่ทำการเปลี่ยนชิป MOSFET ภาคจ่ายไฟ GPU ที่ช็อตเสียหายออกและใส่อะไหล่ใหม่</figcaption>
-                            </figure>
-                        </section>
+                        <!-- Step 3: After -->
+                        <h2>3. สรุปผลงานซ่อมและการทดสอบ</h2>
+                        <p>หลังจากทำการเปลี่ยน MOSFET และประกอบเครื่องกลับ พร้อมกับเปลี่ยนซิลิโคนระบายความร้อนใหม่เรียบร้อยแล้ว เมื่อทดลองจ่ายไฟเข้าเครื่อง พบว่าแรงดันไฟกลับมาปกติที่ 20V (กระแสสแตนด์บายปกติ) เครื่องสามารถกดเปิดติด บูตเข้าสู่ Windows ได้สมบูรณ์ ช่างทำการ Stress Test ทดสอบโหลดการ์ดจอและความร้อนต่อเนื่องเป็นเวลา 2 ชั่วโมง ผ่านเกณฑ์เรียบร้อย พร้อมส่งมอบคืนลูกค้าครับ!</p>
+                        <div class="my-4 text-center">
+                            <img src="images/Lenovo/lenovo-320s/lenovo-320s-repair-complete-display.webp" class="img-fluid rounded-3 shadow-sm border"style="max-width: 500px; width: 100%; height: auto;" alt="Lenovo Ideapad 320S หลังซ่อมเสร็จ" onerror="this.src='https://placehold.co/700x400/1c2541/ffffff?text=Repair+Success'">
+                        </div>
 
-                        <!-- Section 3: ผลลัพธ์หลังซ่อม -->
-                        <section class="mb-5">
-                            <h2 class="h5 fw-bold text-success mb-3 d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-circle-check text-success"></i> 3. ผลการซ่อมและการทดสอบระบบ (After)
-                            </h2>
-                            <p class="text-secondary" style="line-height: 1.7;">
-                                หลังจากทำการเปลี่ยน MOSFET และประกอบเครื่องกลับ พร้อมกับเปลี่ยนซิลิโคนระบายความร้อนใหม่เรียบร้อยแล้ว เมื่อทดลองจ่ายไฟเข้าเครื่อง พบว่าแรงดันไฟกลับมาปกติที่ 20V (กระแสสแตนด์บายปกติ) เครื่องสามารถกดเปิดติด บูตเข้าสู่ Windows ได้สมบูรณ์ ช่างทำการ Stress Test ทดสอบโหลดการ์ดจอและความร้อนต่อเนื่องเป็นเวลา 2 ชั่วโมง ผ่านเกณฑ์เรียบร้อย พร้อมส่งมอบคืนลูกค้าครับ!
-                            </p>
-                            <figure class="figure my-3 w-100">
-                                <img src="images/Lenovo/lenovo-320s/lenovo-320s-repair-complete-display.png" class="img-fluid rounded-4 border w-100" alt="Lenovo Ideapad 320S ซ่อมเสร็จสมบูรณ์ เปิดติดเข้า Windows ได้ปกติ" style="max-height: 450px; object-fit: cover;">
-                                <figcaption class="figure-caption text-center mt-2 small text-muted">ตัวเครื่อง Lenovo Ideapad 320S กลับมาเปิดติด ใช้งานได้ปกติสมบูรณ์ 100%</figcaption>
-                            </figure>
-                        </section>
+                        <!-- FAQ Section (Accordion) -->
+                        <div class="faq-section mt-5 pt-4 border-top">
+                            <h3 class="fw-bold fs-4 text-dark mb-3"><i class="fa-solid fa-circle-question text-warning me-2"></i>คำถามที่พบบ่อย (FAQ)</h3>
+                            
+                            <div class="accordion accordion-flush rounded-3 border overflow-hidden" id="articleFAQ">
+                                
+                                <!-- FAQ Item 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+                                            Lenovo Ideapad 320S เปิดไม่ติดเกิดจากอะไร?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#articleFAQ">
+                                        <div class="accordion-body text-secondary small bg-light">
+                                            อาจเกิดจากแบตเตอรี่เสีย ภาคจ่ายไฟช็อต MOSFET เสีย เมนบอร์ดมีปัญหา หรือวงจรไฟหลักผิดปกติ  จำเป็นต้องตรวจเช็คเพื่อหาสาเหตุที่แท้จริง
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <!-- FAQ Item 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
+                                            ซ่อมเมนบอร์ด Lenovo ใช้เวลากี่วัน?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#articleFAQ">
+                                        <div class="accordion-body text-secondary small bg-light">
+                                             โดยทั่วไปใช้เวลาประมาณ 1-3 วัน ขึ้นอยู่กับอาการเสียและความพร้อมของอะไหล่
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <!-- FAQ -->
+                                <!-- FAQ Item 3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
+                                            ซ่อมแล้วข้อมูลในเครื่องหายหรือไม่?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#articleFAQ">
+                                        <div class="accordion-body text-secondary small bg-light">
+                                            การซ่อมเมนบอร์ดส่วนใหญ่ไม่กระทบข้อมูลใน SSD หรือ Harddisk
+                                        </div>
+                                    </div>
+                                </div>
 
-<section class="mb-5">
-    <div class="text-center mb-4">
-        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">
-            <i class="fa-solid fa-circle-question me-1"></i>
-            FAQ
-        </span>
+                            </div>
+                        </div>
 
-        <h2 class="fw-bold mt-3 mb-2">
-            คำถามที่พบบ่อยเกี่ยวกับ Lenovo Ideapad 320S
-        </h2>
+                        <hr class="my-4">
 
-        <p class="text-muted">
-            คำถามที่ลูกค้าสอบถามบ่อยเกี่ยวกับอาการเปิดไม่ติดและการซ่อมเมนบอร์ด
-        </p>
-    </div>
-
-    <div class="accordion accordion-flush border rounded-4 overflow-hidden shadow-sm"
-         id="faqAccordion">
-
-        <div class="accordion-item">
-            <h3 class="accordion-header">
-                <button class="accordion-button fw-semibold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#faq1">
-                    Lenovo Ideapad 320S เปิดไม่ติดเกิดจากอะไร?
-                </button>
-            </h3>
-
-            <div id="faq1"
-                 class="accordion-collapse collapse show"
-                 data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    อาจเกิดจากแบตเตอรี่เสีย ภาคจ่ายไฟช็อต MOSFET เสีย
-                    เมนบอร์ดมีปัญหา หรือวงจรไฟหลักผิดปกติ
-                    จำเป็นต้องตรวจเช็คเพื่อหาสาเหตุที่แท้จริง
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h3 class="accordion-header">
-                <button class="accordion-button collapsed fw-semibold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#faq2">
-                    ซ่อมเมนบอร์ด Lenovo ใช้เวลากี่วัน?
-                </button>
-            </h3>
-
-            <div id="faq2"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    โดยทั่วไปใช้เวลาประมาณ 1-3 วัน
-                    ขึ้นอยู่กับอาการเสียและความพร้อมของอะไหล่
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h3 class="accordion-header">
-                <button class="accordion-button collapsed fw-semibold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#faq3">
-                    ซ่อมแล้วข้อมูลในเครื่องหายหรือไม่?
-                </button>
-            </h3>
-
-            <div id="faq3"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    การซ่อมเมนบอร์ดส่วนใหญ่ไม่กระทบข้อมูลใน SSD หรือ Harddisk
-                    แต่แนะนำให้สำรองข้อมูลไว้ก่อนทุกครั้งหากเครื่องยังสามารถเข้าถึงข้อมูลได้
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-                        <!-- Call to Action Box -->
-<div class="bg-dark text-white p-4 p-md-5 rounded-4 mt-5 text-center shadow-sm">
-
-    <h3 class="h4 fw-bold mb-2">
-        โน๊ตบุ๊ค Lenovo หรือแบรนด์อื่นๆ เปิดไม่ติด ไฟไม่เข้า?
-    </h3>
-
-    <p class="text-light small mb-4">
-        ตรวจเช็คอาการฟรี ประเมินราคาก่อนซ่อม ซ่อมบอร์ดระดับอุปกรณ์ ชิปเซ็ต
-        ไม่ต้องยกเปลี่ยนบอร์ดแพงๆ
-    </p>
-
-    <!-- ปุ่มหลัก -->
-    <div class="d-flex flex-wrap justify-content-center gap-3">
-        <a href="tel:063-594-2636"
-           class="btn btn-primary rounded-pill px-4 py-3 fw-bold d-flex align-items-center gap-2 shadow">
-            <i class="fa-solid fa-phone"></i>
-            โทรด่วน: 063-594-2636
-        </a>
-
-        <a href="https://line.me/R/ti/p/%40935pcssr"
-           target="_blank"
-           class="btn btn-success rounded-pill px-4 py-3 fw-bold d-flex align-items-center gap-2 shadow">
-            <i class="fa-brands fa-line fs-5"></i>
-            ทัก Line: Notebook Repair CM
-        </a>
-    </div>
-
-    <!-- เว้นบรรทัดเพิ่ม -->
-    <div class="mt-4"></div>
-
-    <!-- ปุ่มส่งซ่อมออนไลน์ -->
-    <div class="text-center">
-        <a href="https://script.google.com/macros/s/AKfycbxPL98eVgrYdhkeU9Awbu2HyatHxaI84M3uvvWpniMcIbWOswydxYtzsUQgWecf5kVn/exec?page=customer"
-           target="_blank"
-           class="btn rounded-pill px-5 py-3 fw-bold shadow"
-           style="background: linear-gradient(135deg,#ffb300,#ff8f00); color:#fff; border:none;">
-
-            <i class="fa-solid fa-box-open me-2"></i>
-            ส่งซ่อมออนไลน์ทั่วประเทศ
-        </a>
-
-        <div class="small text-white-50 mt-2">
-            <i class="fa-solid fa-truck-fast me-1"></i>
-            ส่งเครื่องผ่านขนส่งได้ทั่วประเทศ
-        </div>
-    </div>
-
-    
-</div>
-                        
+                        <!-- Author / Shop Profile -->
+                        <div class="author-box d-flex align-items-center gap-3">
+                            <img src="images/logo-shop.png" class="rounded-circle" style="width: 55px; height: 55px; object-fit: cover;" alt="ซ่อมโน๊ตบุ๊คเชียงใหม่">
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">ซ่อมโน๊ตบุ๊คเชียงใหม่ Computer Services</h6>
+                                <p class="small text-muted mb-0">งานซ่อมได้มาตรฐาน อะไหล่แท้ตรงรุ่น ตรวจเช็คฟรี ประสบการณ์มากกว่า 10 ปี</p>
+                            </div>
+                        </div>
 
                     </article>
                 </div>
+
+                <!-- Sidebar Area -->
+                <div class="col-lg-4">
+                    <div class="sticky-top" style="top: 100px; z-index: 10;">
+                        
+                        <!-- CTA Box -->
+                        <div class="sidebar-cta-card mb-4 text-center">
+                            <i class="fa-solid fa-headset fs-1 text-warning mb-3"></i>
+                            <h5 class="fw-bold mb-2">เครื่องมีอาการแบบนี้?</h5>
+                            <p class="small text-white-50 mb-4">ส่งรูปถ่ายหรือสอบถามราคาประเมินซ่อมฟรีได้เลยครับ</p>
+                            
+                            <a href="https://line.me/R/ti/p/%40935pcssr" target="_blank" class="btn btn-warning w-100 fw-bold rounded-pill mb-2">
+                                <i class="fa-brands fa-line me-2"></i>ปรึกษาช่างทาง LINE
+                            </a>
+                            <a href="tel:063-594-2636" class="btn btn-outline-light w-100 rounded-pill small">
+                                <i class="fa-solid fa-phone me-2"></i>063-594-2636
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-black py-4 border-top border-secondary border-opacity-25">
-        <div class="container text-center text-md-start d-md-flex justify-content-between align-items-center">
-            <p class="mb-0 small text-secondary">&copy; 2026 Notebook Repair CM. All rights reserved.</p>
-            <div class="d-flex justify-content-center gap-3 fs-5 mt-2 mt-md-0">
-                <a href="https://line.me/R/ti/p/%40935pcssr" target="_blank" class="text-secondary footer-link">
-                    <i class="fa-brands fa-line"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>

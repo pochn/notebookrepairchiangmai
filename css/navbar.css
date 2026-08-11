@@ -1,0 +1,124 @@
+/* ==========================================
+   Phase 1: Premium Navbar & TopBar Styles
+   ========================================== */
+
+/* 1. Base Smooth Transition */
+#topBar,
+#mainNavbar,
+.brand-logo,
+.brand-logo i,
+.brand-logo span,
+.nav-main-link,
+.call-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. TopBar Styling & Collapse Effect */
+#topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 50px;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 1032;
+    background-color: #0b132b !important;
+}
+
+#topBar.topbar-hidden {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border: none !important;
+}
+
+.topbar-text {
+    color: #f0f4f8 !important;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.topbar-text i {
+    color: #ff9d42 !important;
+}
+
+.topbar-link {
+    color: #e8ecf1 !important;
+    transition: color 0.25s ease;
+}
+
+.topbar-link:hover {
+    color: #ff9d42 !important;
+}
+
+.topbar-link i {
+    color: #ff9d42 !important;
+}
+
+
+/* 3. Main Navbar Base (Fixed Top) */
+#mainNavbar {
+    z-index: 1030;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    top: 50px;
+}
+
+/* 4. Scroll State (Shrink, Blur, Shadow) */
+#mainNavbar.navbar-scrolled {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    top: 0;
+}
+
+
+/* 5. Logo State on Scroll */
+#mainNavbar.navbar-scrolled .brand-logo .fs-2 {
+    font-size: 1.5rem !important;
+}
+
+#mainNavbar.navbar-scrolled .brand-logo span.fs-5 {
+    font-size: 1.05rem !important;
+}
+
+/* 6. Navigation Link Hover Effects */
+.nav-main-link {
+    position: relative;
+    color: #2b2d42 !important;
+}
+
+.nav-main-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 2px;
+    left: 50%;
+    background-color: #0d6efd;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.nav-main-link:hover::after,
+.nav-main-link.active::after {
+    width: 70%;
+}
+
+/* 7. Call Button Hover Effects */
+.call-button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.call-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.35) !important;
+}

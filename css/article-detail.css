@@ -1,0 +1,175 @@
+/* ==========================================
+   Article Detail Page Styling (Clean Version)
+   ========================================== */
+
+/* Layout & Header */
+.article-header {
+    padding-top: 170px !important; /* ปรับเพิ่มระยะเว้นจาก Navbar ด้านบน */
+    padding-bottom: 30px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #edf2f6;
+}
+
+.breadcrumb-item a {
+    color: #64748b;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #ff7b00;
+    font-weight: 600;
+}
+
+.article-main-card {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.article-cover-img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Quote / Highlight Box */
+.article-highlight-box {
+    background: rgba(255, 123, 0, 0.05);
+    border-left: 4px solid #ff7b00;
+    padding: 16px 20px;
+    border-radius: 0 12px 12px 0;
+    margin: 1.5rem 0;
+}
+
+.article-highlight-box strong {
+    font-size: 1.1rem !important;   /* หัวข้อในกล่องสรุป (~17.5px) */
+}
+
+.article-highlight-box span {
+    font-size: 1.05rem !important;  /* รายละเอียดในกล่องสรุป (~17px) */
+}
+
+/* Sidebar CTA Card */
+.sidebar-cta-card {
+    background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid rgba(255, 123, 0, 0.3);
+}
+
+/* Author Profile */
+.author-box {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+/* FAQ Section */
+.faq-section .accordion-button {
+    font-size: 1.1rem !important;   /* ตัวคำถาม (~17.5px) */
+}
+
+.faq-section .accordion-body {
+    font-size: 1.05rem !important;  /* ตัวคำตอบ (~17px) */
+    line-height: 1.7;
+}
+
+/* ===================================================
+   1. Typography & Font Size (Desktop / Laptop)
+   =================================================== */
+
+/* ตัวหนังสือทั่วไปในเนื้อหาบทความ (จอใหญ่ 20px) */
+.article-main-card p, 
+.article-main-card li {
+    font-size: 1.25rem !important; /* 20px อ่านง่ายสบายตา */
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 1.2rem;
+}
+
+/* หัวข้อขั้นตอน H2, H3 */
+.article-main-card h2,
+.article-main-card h3 {
+    color: #0b132b;
+    font-weight: 700;
+    font-size: 1.6rem !important;  /* ~25.6px ให้โดดเด่น */
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* ===================================================
+   2. Fix Icon Spacing (ทำงานครอบคลุมทุกหน้าจอ)
+   =================================================== */
+
+/* ดันระยะห่างให้แท็กไอคอน <i> ทั้งหมดในกล่องสรุป */
+.article-highlight-box i,
+.article-highlight-box strong i,
+.article-highlight-box span i {
+    margin-right: 12px !important; /* ดันข้อความออกไป 12px ให้โปร่งสวย */
+    display: inline-block;
+}
+
+/* ===================================================
+   3. Responsive Mobile Screen (max-width: 767.98px)
+   =================================================== */
+@media (max-width: 767.98px) {
+    .article-header {
+        padding-top: 150px !important; 
+        padding-bottom: 20px;
+    }
+
+    .article-main-card {
+        padding: 20px;
+    }
+
+    /* หัวข้อบทความ (H1) บนมือถือ */
+    .article-header h1 {
+        font-size: 1.5rem !important; /* 24px */
+    }
+
+    /* เนื้อหาบทความบนมือถือ */
+    .article-main-card p, 
+    .article-main-card li {
+        font-size: 1.05rem !important; /* ~17px พอดีสายตา */
+        line-height: 1.7;
+    }
+
+    /* หัวข้อข้อความ Step 1, 2, 3 (H2) */
+    .article-main-card h2,
+    .article-main-card h3 {
+        font-size: 1.3rem !important;  /* ~20.8px */
+    }
+
+    /* กล่องสรุป Highlight Box บนมือถือ */
+    .article-highlight-box strong,
+    .article-highlight-box span {
+        font-size: 1rem !important;    /* 16px */
+    }
+}
+
+/* ปรับแต่ง Accordion FAQ ให้ดูเป็นกล่องการ์ดสวยงาม */
+.faq-section .accordion-button:not(.collapsed) {
+    background-color: #f8fafc !important;
+    color: #ff7b00 !important;
+    box-shadow: none !important;
+}
+
+.faq-section .accordion-button:focus {
+    box-shadow: none !important;
+    border-color: rgba(0,0,0,0.125);
+}
+
+.faq-section .accordion-item {
+    border: 1px solid #e2e8f0 !important;
+    transition: all 0.2s ease;
+}
+
+.faq-section .accordion-item:hover {
+    border-color: #cbd5e1 !important;
+    transform: translateY(-2px);
+}

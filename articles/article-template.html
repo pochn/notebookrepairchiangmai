@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทความซ่อมโน๊ตบุ๊ค | ศูนย์ซ่อมโน๊ตบุ๊ค เชียงใหม่</title>
+    <meta name="description" content="บทความเรียนรู้เกี่ยวกับการซ่อมโน๊ตบุ๊คและแก้ปัญหาต่างๆ">
+    <meta name="keywords" content="ซ่อมโน๊ตบุ๊ค, เทคนิคซ่อม, โน๊ตบุ๊ค, บทความ">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/article.css">
+    
+    <style>
+        .article-hero {
+            background: linear-gradient(135deg, #090e17 0%, #111b2e 100%);
+            color: white;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -5%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(255, 123, 0, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+        }
+        
+        .article-content {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            margin: -50px auto 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .article-content h2 {
+            color: #1e293b;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff7b00;
+            padding-left: 16px;
+        }
+        
+        .article-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .article-content p {
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .article-content ul {
+            color: #475569;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .article-content li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 24px;
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .article-badge {
+            display: inline-block;
+            background: rgba(255, 123, 0, 0.1);
+            border: 1px solid rgba(255, 123, 0, 0.3);
+            color: #ff7b00;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 12px;
+        }
+        
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 100px 20px;
+            color: #64748b;
+        }
+        
+        .error-message {
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 50px 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+    
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <div class="container position-relative z-1">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div id="article-hero-content">
+                        <h1 id="article-title" style="font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;"></h1>
+                        <p id="article-subtitle" style="font-size: 1.1rem; color: #a3b1c6; margin-bottom: 0;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Article Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div id="loading" class="loading">
+                        <i class="fa-solid fa-spinner fa-spin" style="font-size: 2rem; color: #ff7b00;"></i>
+                        <p style="margin-top: 16px;">กำลังโหลดบทความ...</p>
+                    </div>
+                    
+                    <div id="error" class="error-message d-none"></div>
+                    
+                    <div id="article-content" class="article-content d-none">
+                        <!-- Meta Information -->
+                        <div class="article-meta">
+                            <div class="article-meta-item">
+                                <i class="fa-regular fa-calendar"></i>
+                                <span id="article-date"></span>
+                            </div>
+                            <div class="article-meta-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span id="article-readtime"></span>
+                            </div>
+                            <div class="article-meta-item">
+                                <i class="fa-solid fa-user"></i>
+                                <span id="article-author"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Tags -->
+                        <div style="margin-bottom: 30px;">
+                            <span class="article-badge" id="article-brand"></span>
+                            <span class="article-badge" id="article-model"></span>
+                            <span class="article-badge" id="article-problem"></span>
+                        </div>
+                        
+                        <!-- Featured Image -->
+                        <img id="article-image" src="" alt="" class="article-image d-none">
+                        
+                        <!-- Article Body -->
+                        <div id="article-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Related Articles -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h3 class="fw-bold text-center mb-5">บทความที่เกี่ยวข้อง</h3>
+            <div class="row g-3" id="related-articles">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    
+    <!-- Article Loader -->
+    <script src="../js/article-loader.js"></script>
+</body>
+</html>

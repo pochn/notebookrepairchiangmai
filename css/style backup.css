@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+}
+
+/* Custom Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Stat Box */
+.stat-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Brand Logos */
+.brand-logo-img {
+    max-height: 28px;
+    filter: grayscale(30%);
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.brand-logo-img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Process Step Cards */
+.process-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin: 0 auto 10px auto;
+}
+
+/* Card Improvements */
+.custom-card {
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.repair-img {
+    height: 160px;
+    object-fit: cover;
+}
+
+.article-thumb {
+    height: 70px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-text-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.article-title {
+    font-size: 14px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

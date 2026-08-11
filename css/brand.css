@@ -1,0 +1,48 @@
+/* ==========================================
+   Phase 3: Brand Cards Styling
+   ========================================== */
+
+.brand-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.brand-card {
+    background: #f8f9fa;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.brand-card:hover {
+    background: #ffffff;
+    border-color: rgba(255, 123, 0, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #4a5568;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.brand-card:hover .brand-name {
+    color: #ff7b00;
+}
+
+.brand-subtext {
+    font-size: 11px;
+    color: #a0aec0;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
