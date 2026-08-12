@@ -1,6 +1,14 @@
 {
   "repairs": [
     {
+      "id": "repair-6736",
+      "brand": "GL542LI-HN053T",
+      "title": "GL542LI-HN053T",
+      "symptom": "คีย์บอร์ดกดไม่ได้บางปุ่ม คีย์บอร์ดเสีย",
+      "image": "images/gl542lihn053t/gl542li-hn053t/gl542li-hn053t-after-llc.webp",
+      "link": "gl542li-hn053t-repair-chiangmai.html"
+    },
+    {
       "id": "repair-5",
       "brand": "ASUS",
       "title": "Asus GL542LI-HN053T",
@@ -49,9 +57,6 @@
       "link": "dell-vostro-3750-screen-replacement-chiangmai.html"
     }
   ],
-
-
-
   "articles": [
     {
       "id": "art-1",
