@@ -7,77 +7,87 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #f4f6f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .card-custom { border: none; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .img-preview { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; border: 2px dashed #ccc; background-color: #fafafa; }
-        .btn-publish { background-color: #0d6efd; color: white; border-radius: 10px; font-weight: 600; padding: 12px; }
-        .btn-publish:hover { background-color: #0b5ed7; }
+        body { background-color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; }
+        .card-custom { border: none; border-radius: 16px; box-shadow: 0 4px 25px rgba(0,0,0,0.06); }
+        .img-preview { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; border: 2px dashed #cbd5e1; background-color: #f8fafc; }
+        .btn-publish { background-color: #0284c7; color: white; border-radius: 10px; font-weight: 600; padding: 14px; }
+        .btn-publish:hover { background-color: #0369a1; color: white; }
     </style>
 </head>
 <body class="py-5">
-    <div class="container" style="max-width: 850px;">
+    <div class="container" style="max-width: 900px;">
         <div class="card card-custom p-4 p-md-5 bg-white">
-            <h2 class="fw-bold text-dark mb-1"><i class="fa-solid fa-pen-to-square text-primary me-2"></i>สร้างบทความงานซ่อมใหม่</h2>
-            <p class="text-muted mb-4">กรอกรายละเอียดงานซ่อม แนบรูปภาพ 3 รูป ระบบจะอัปโหลดและ Publish ขึ้น GitHub อัตโนมัติ</p>
+            <h2 class="fw-bold text-dark mb-1"><i class="fa-solid fa-pen-to-square text-primary me-2"></i>ระบบสร้างบทความงานซ่อม (Auto-GitHub Publish)</h2>
+            <p class="text-muted mb-4">กรอกรายละเอียด แนบรูปภาพ ระบบจะย่อเป็น WebP และบันทึกลง GitHub พร้อมอัปเดต posts.json อัตโนมัติ</p>
             
             <form id="articleForm">
-                <!-- ข้อมูลพื้นฐาน -->
                 <div class="row g-3 mb-4">
                     <div class="col-md-6">
-                        <label class="form-label fw-semibold">ยี่ห้อ / รุ่น (Brand & Model)</label>
+                        <label class="form-label fw-bold small">1. ยี่ห้อ & รุ่นโน๊ตบุ๊ค</label>
                         <input type="text" class="form-control" id="brandModel" placeholder="เช่น Acer Aspire F5-573G" required>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label fw-semibold">ชื่อไฟล์ลิงก์ (URL Slug)</label>
-                        <input type="text" class="form-control" id="fileNameLink" placeholder="เช่น acer-f5-573g-screen-repair" required>
+                        <label class="form-label fw-bold small text-primary">ชื่อไฟล์ลิงก์ HTML (URL Slug)</label>
+                        <input type="text" class="form-control" id="fileNameLink" placeholder="เช่น acer-f5-573g-screen-repair-chiangmai.html" required>
                     </div>
                     <div class="col-12">
-                        <label class="form-label fw-semibold">หัวข้อบทความ (Article Title)</label>
-                        <input type="text" class="form-control" id="articleTitle" placeholder="เช่น ซ่อมโน๊ตบุ๊ค Acer Aspire F5 อาการเปิดติดไม่ขึ้นภาพ เปลี่ยนจอ LCD" required>
+                        <label class="form-label fw-bold small">หัวข้อบทความ (H1)</label>
+                        <input type="text" class="form-control" id="articleTitle" placeholder="เช่น ซ่อม Acer Aspire F5-573G อาการเปิดติดภาพไม่ขึ้น เปลี่ยนจอ LCD ใหม่" required>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label fw-semibold">อาการเสีย (Symptom)</label>
-                        <input type="text" class="form-control" id="symptom" placeholder="เช่น หน้าจอลาย เปิดติดไม่ขึ้นภาพ" required>
+                        <label class="form-label fw-bold small">อาการเสีย (Symptom)</label>
+                        <input type="text" class="form-control" id="symptom" placeholder="เช่น ภาพไม่ขึ้นหน้าจอ (จอดำสนิท/ไฟเข้า)" required>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label fw-semibold">แนวทางการแก้ไข (Solution)</label>
-                        <input type="text" class="form-control" id="solution" placeholder="เช่น เปลี่ยนหน้าจอ LCD ขนาด 15.6 นิ้ว FHD 30 Pin" required>
+                        <label class="form-label fw-bold small">แนวทางแก้ไข (Solution)</label>
+                        <input type="text" class="form-control" id="solution" placeholder="เช่น เปลี่ยน Panel จอภาพใหม่ตรงรุ่นมาตรฐานโรงงาน" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold small">ประเภทงานซ่อม (Tag Badge)</label>
+                        <input type="text" class="form-control" id="repairTag" value="เปลี่ยนจอภาพ LCD">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold small">ระยะเวลาซ่อม</label>
+                        <input type="text" class="form-control" id="repairTime" value="1 - 2 ชั่วโมง (รอรับได้เลย)">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold small">การรับประกัน</label>
+                        <input type="text" class="form-control" id="warrantyText" value="ประกันอะไหล่แท้ 6 เดือนเต็ม">
                     </div>
                 </div>
 
                 <hr class="my-4">
 
-                <!-- อัปโหลดรูปภาพ 3 ขั้นตอน -->
-                <h5 class="fw-bold mb-3"><i class="fa-solid fa-images text-primary me-2"></i>รูปภาพประกอบบทความ (แนบได้เลย ระบบแปลงเป็น WebP ให้อัตโนมัติ)</h5>
+                <h5 class="fw-bold mb-3"><i class="fa-solid fa-images text-primary me-2"></i>รูปภาพและรายละเอียดขั้นตอน (พิมพ์ยาวได้หลายบรรทัด)</h5>
                 
                 <div class="row g-3 mb-4">
-                    <!-- รูปที่ 1 -->
+                    <!-- Step 1 -->
                     <div class="col-md-4">
-                        <div class="card p-2 text-center h-100">
-                            <label class="form-label fw-semibold text-danger">1. ก่อนซ่อม (Before)</label>
+                        <div class="card p-3 text-center h-100 bg-light border">
+                            <label class="form-label fw-bold text-danger small">Step 1: ก่อนซ่อม (Before)</label>
                             <img id="prevBefore" class="img-preview mb-2" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23aaa'%3Eเลือกรูปก่อนซ่อม%3C/text%3E%3C/svg%3E">
                             <input type="file" class="form-control form-control-sm mb-2" id="imgBeforeInput" accept="image/*" required>
-                            <input type="text" class="form-control form-control-sm" id="descBefore" placeholder="คำอธิบายรูปก่อนซ่อม">
+                            <textarea class="form-control form-control-sm" id="descBefore" rows="3" placeholder="พิมพ์/ก๊อปปี้คำอธิบายรายละเอียดก่อนซ่อมยาวๆ วางตรงนี้ได้เลย..."></textarea>
                         </div>
                     </div>
 
-                    <!-- รูปที่ 2 -->
+                    <!-- Step 2 -->
                     <div class="col-md-4">
-                        <div class="card p-2 text-center h-100">
-                            <label class="form-label fw-semibold text-warning">2. ระหว่างซ่อม (Progress)</label>
+                        <div class="card p-3 text-center h-100 bg-light border">
+                            <label class="form-label fw-bold text-warning small">Step 2: ระหว่างซ่อม (Progress)</label>
                             <img id="prevProgress" class="img-preview mb-2" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23aaa'%3Eเลือกรูประหว่างซ่อม%3C/text%3E%3C/svg%3E">
                             <input type="file" class="form-control form-control-sm mb-2" id="imgProgressInput" accept="image/*" required>
-                            <input type="text" class="form-control form-control-sm" id="descProgress" placeholder="คำอธิบายรูประหว่างซ่อม">
+                            <textarea class="form-control form-control-sm" id="descProgress" rows="3" placeholder="พิมพ์/ก๊อปปี้คำอธิบายการตรวจเช็กและซ่อมวางตรงนี้ได้เลย..."></textarea>
                         </div>
                     </div>
 
-                    <!-- รูปที่ 3 -->
+                    <!-- Step 3 -->
                     <div class="col-md-4">
-                        <div class="card p-2 text-center h-100">
-                            <label class="form-label fw-semibold text-success">3. หลังซ่อมเสร็จ (After)</label>
+                        <div class="card p-3 text-center h-100 bg-light border">
+                            <label class="form-label fw-bold text-success small">Step 3: หลังซ่อมเสร็จ (After)</label>
                             <img id="prevAfter" class="img-preview mb-2" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23aaa'%3Eเลือกรูปหลังซ่อม%3C/text%3E%3C/svg%3E">
                             <input type="file" class="form-control form-control-sm mb-2" id="imgAfterInput" accept="image/*" required>
-                            <input type="text" class="form-control form-control-sm" id="descAfter" placeholder="คำอธิบายรูปหลังซ่อม">
+                            <textarea class="form-control form-control-sm" id="descAfter" rows="3" placeholder="พิมพ์/ก๊อปปี้สรุปผลการซ่อมและเทสเครื่องวางตรงนี้ได้เลย..."></textarea>
                         </div>
                     </div>
                 </div>
@@ -94,20 +104,18 @@
     </div>
 
     <script>
-        // *** นำ Web App URL ที่ได้จาก Google Apps Script มาใส่ตรงนี้ ***
-        const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyE615hzC5WBWl_fb4jPVLoOttb9rrFHeWgsoXm7k3AMyLKRdPfj0NB5bHynO2MBb63JA/exec";
+        // *** ใส่ Web App URL ของ Google Apps Script ของคุณตรงนี้ ***
+        const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz6dc9paohinnek2WR74qoMFHi1TFXhH-ppSulnm8P15mF85ViamtLu5xi8vOT60w3XxQ/exec";
 
-        // แปลงข้อความชื่อรุ่นเป็น URL slug ภาษาอังกฤษอัตโนมัติ
         document.getElementById('brandModel').addEventListener('input', function(e) {
             const slug = e.target.value.toLowerCase()
                 .replace(/[^a-z0-9 -]/g, '')
                 .replace(/\s+/g, '-')
                 .replace(/-+/g, '-');
-            document.getElementById('fileNameLink').value = slug ? `${slug}-repair.html` : '';
+            document.getElementById('fileNameLink').value = slug ? `${slug}-repair-chiangmai.html` : '';
             document.getElementById('articleTitle').value = `ซ่อม ${e.target.value}`;
         });
 
-        // ฟังก์ชันอ่านไฟล์รูปภาพและแปลงเป็น Base64 (WebP)
         function processImage(inputElem, previewElem) {
             return new Promise((resolve, reject) => {
                 const file = inputElem.files[0];
@@ -118,7 +126,7 @@
                     const img = new Image();
                     img.onload = function() {
                         const canvas = document.createElement('canvas');
-                        const maxDim = 1200; // ปรับขนาดความกว้าง/สูงไม่เกิน 1200px
+                        const maxDim = 1200;
                         let width = img.width;
                         let height = img.height;
 
@@ -137,7 +145,6 @@
                         const ctx = canvas.getContext('2d');
                         ctx.drawImage(img, 0, 0, width, height);
 
-                        // แปลงรูปเป็นไฟล์ .webp คุณภาพ 80%
                         const webpData = canvas.toDataURL('image/webp', 0.8);
                         previewElem.src = webpData;
                         resolve(webpData);
@@ -148,7 +155,6 @@
             });
         }
 
-        // Preview รูปเมื่อเลือกไฟล์
         let imgBeforeBase64 = "", imgProgressBase64 = "", imgAfterBase64 = "";
         document.getElementById('imgBeforeInput').addEventListener('change', async function() {
             imgBeforeBase64 = await processImage(this, document.getElementById('prevBefore'));
@@ -160,16 +166,15 @@
             imgAfterBase64 = await processImage(this, document.getElementById('prevAfter'));
         });
 
-        // ส่งฟอร์ม
         document.getElementById('articleForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
             const alertBox = document.getElementById('statusAlert');
 
             btn.disabled = true;
-            btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>กำลังอัปโหลดรูปและสร้างบทความ...`;
-            alertBox.className = "alert alert-info mt-3";
-            alertBox.innerText = "ระบบกำลังอัปโหลดรูปภาพลง Google Drive และสร้างไฟล์บน GitHub กรุณารอประมาณ 5-10 วินาที...";
+            btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>กำลังประมวลผลอัปโหลดขึ้น GitHub...`;
+            alertBox.className = "alert alert-info mt-3 d-block";
+            alertBox.innerText = "ระบบกำลังส่งไฟล์รูปภาพและไฟล์บทความขึ้น GitHub กรุณารอประมาณ 5-10 วินาที...";
 
             const payload = {
                 brandModel: document.getElementById('brandModel').value,
@@ -177,6 +182,9 @@
                 articleTitle: document.getElementById('articleTitle').value,
                 symptom: document.getElementById('symptom').value,
                 solution: document.getElementById('solution').value,
+                repairTag: document.getElementById('repairTag').value,
+                repairTime: document.getElementById('repairTime').value,
+                warrantyText: document.getElementById('warrantyText').value,
                 descBefore: document.getElementById('descBefore').value || "ภาพเครื่องลูกค้าก่อนทำการซ่อม",
                 descProgress: document.getElementById('descProgress').value || "ภาพขั้นตอนระหว่างทำการซ่อมตรวจเช็กระบบ",
                 descAfter: document.getElementById('descAfter').value || "ภาพหลังซ่อมเสร็จสิ้น ทดสอบใช้งานเรียบร้อย",
@@ -193,15 +201,15 @@
                 const resData = await response.json();
 
                 if (resData.status === "success") {
-                    alertBox.className = "alert alert-success mt-3";
-                    alertBox.innerHTML = `<strong><i class="fa-solid fa-circle-check me-2"></i>สำเร้จ!</strong> เผยแพร่บทความเรียบร้อยแล้ว<br>
+                    alertBox.className = "alert alert-success mt-3 d-block";
+                    alertBox.innerHTML = `<strong><i class="fa-solid fa-circle-check me-2"></i>สำเร็จ!</strong> เผยแพร่บทความเรียบร้อยแล้ว<br>
                     <a href="https://pochn.github.io/notebookrepairchiangmai/${resData.articleUrl}" target="_blank" class="alert-link">คลิกที่นี่เพื่อดูหน้าบทความบนเว็บ</a>`;
                     document.getElementById('articleForm').reset();
                 } else {
                     throw new Error(resData.message);
                 }
             } catch (err) {
-                alertBox.className = "alert alert-danger mt-3";
+                alertBox.className = "alert alert-danger mt-3 d-block";
                 alertBox.innerText = "เกิดข้อผิดพลาด: " + err.message;
             } finally {
                 btn.disabled = false;
