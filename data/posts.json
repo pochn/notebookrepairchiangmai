@@ -1,6 +1,14 @@
 {
   "repairs": [
     {
+      "id": "repair-5",
+      "brand": "ASUS",
+      "title": "Asus GL542LI-HN053T",
+      "symptom": "เปลี่ยนจอโน๊ตบุ๊ค Asus GL553VD",
+      "image": "images/Asus/GL553VD/Asus-gl553vd-screen.webp",
+      "link": "asus-gl553vd-screen-replacement.html"
+    },
+    {
       "id": "repair-9899",
       "brand": "GL542LI-HN053T",
       "title": "GL542LI-HN053T",
@@ -41,6 +49,9 @@
       "link": "dell-vostro-3750-screen-replacement-chiangmai.html"
     }
   ],
+
+
+
   "articles": [
     {
       "id": "art-1",
