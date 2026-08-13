@@ -17,28 +17,12 @@
       "link": "asus-gl553vd-screen-replacement.html"
     },
     {
-      "id": "repair-9899",
-      "brand": "GL542LI-HN053T",
-      "title": "GL542LI-HN053T",
-      "symptom": "คีย์บอร์ดกดไม่ได้บางปุ่ม คีย์บอร์ดเสีย",
-      "image": "https://lh3.googleusercontent.com/d/1YI-Y47yXEWXexL83tgBwt4fZd5Wc9mkf",
-      "link": "gl542li-hn053t-repair.html"
-    },
-    {
       "id": "repair-1",
       "brand": "Lenovo",
       "title": "Lenovo Ideapad 320S",
       "symptom": "อาการเปิดไม่ติด ไฟไม่เข้า เปลี่ยน MOSFET คาปาช็อต",
       "image": "images/Lenovo/lenovo-320s/lenovo-320s-repair-complete-display.webp",
       "link": "lenovo-320s-power-on-repair-chiangmai.html"
-    },
-    {
-      "id": "repair-2",
-      "brand": "ACER",
-      "title": "ACER Aspire F5-573G",
-      "symptom": "ภาพไม่ขึ้นหน้าจอ (จอดำสนิท)",
-      "image": "images/ACER/F5-573G/acer-f5-573g-repair-complete-display.webp",
-      "link": "acer-f5-573g-screen-repair-chiangmai.html"
     },
     {
       "id": "repair-3",
