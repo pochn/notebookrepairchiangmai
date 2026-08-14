@@ -1,6 +1,14 @@
 {
   "repairs": [
     {
+      "id": "repair-2869",
+      "brand": "Acer",
+      "title": "Acer F5-573G",
+      "symptom": "ภาพไม่ขึ้นที่หน้าจอ ( จอดำสนิท / มีไฟเข้า )",
+      "image": "images/acer/acer-f5-573g/acer-f5-573g-after-sja.webp",
+      "link": "acer-f5-573g-repair-chiangmai.html"
+    },
+    {
       "id": "repair-6736",
       "brand": "GL542LI-HN053T",
       "title": "GL542LI",
