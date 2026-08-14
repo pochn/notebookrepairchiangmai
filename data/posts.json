@@ -3,7 +3,7 @@
     {
       "id": "repair-6736",
       "brand": "GL542LI-HN053T",
-      "title": "GL542LI-HN053T",
+      "title": "GL542LI",
       "symptom": "คีย์บอร์ดกดไม่ได้บางปุ่ม คีย์บอร์ดเสีย",
       "image": "images/gl542lihn053t/gl542li-hn053t/gl542li-hn053t-after-llc.webp",
       "link": "gl542li-hn053t-repair-chiangmai.html"
@@ -11,7 +11,7 @@
     {
       "id": "repair-5",
       "brand": "ASUS",
-      "title": "Asus GL542LI-HN053T",
+      "title": "GL553VD",
       "symptom": "เปลี่ยนจอโน๊ตบุ๊ค Asus GL553VD",
       "image": "images/Asus/GL553VD/Asus-gl553vd-screen.webp",
       "link": "asus-gl553vd-screen-replacement.html"
@@ -20,7 +20,7 @@
       "id": "repair-1",
       "brand": "Lenovo",
       "title": "Lenovo Ideapad 320S",
-      "symptom": "อาการเปิดไม่ติด ไฟไม่เข้า เปลี่ยน MOSFET คาปาช็อต",
+      "symptom": "อาการเปิดไม่ติด ไฟไม่เข้า เปลี่ยน MOSFET",
       "image": "images/Lenovo/lenovo-320s/lenovo-320s-repair-complete-display.webp",
       "link": "lenovo-320s-power-on-repair-chiangmai.html"
     },
