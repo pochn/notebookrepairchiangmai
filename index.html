@@ -110,11 +110,24 @@
       </div>
 
       <!-- ฝั่งขวา: รูปถ่ายโต๊ะซ่อม -->
-      <div class="col-lg-6 text-center">
-        <div class="p-2 bg-white rounded-4 shadow-lg border border-light">
-          <img src="images/hero.png" class="img-fluid rounded-3" alt="โต๊ะงานซ่อมโน๊ตบุ๊คเชียงใหม่" style="max-height: 420px; object-fit: cover; width: 100%;">
-        </div>
+      <!-- ฝั่งขวา: รูปถ่ายช่างและโต๊ะซ่อมจริง (สไตล์การ์ดพรีเมียมบนพื้นสว่าง) -->
+<div class="col-lg-6 text-center position-relative">
+  <!-- กรอบภาพสไตล์ศูนย์บริการพรีเมียม -->
+  <div class="p-2 bg-white rounded-4 shadow-lg border border-light position-relative overflow-hidden">
+    <img src="images/hero.webp" class="img-fluid rounded-3" alt="ช่างซ่อมโน๊ตบุ๊คเชียงใหม่" style="max-height: 420px; width: 100%; object-fit: cover; object-position: center;">
+    
+    <!-- Floating Badge แท็กการันตีลอยมุมภาพ (ช่วยเพิ่มความพรีเมียม) -->
+    <div class="position-absolute bottom-0 start-0 m-3 px-3 py-2 bg-white rounded-3 shadow-sm border border-primary border-opacity-25 d-flex align-items-center gap-2">
+      <div class="rounded-circle bg-success d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
+        <i class="fa-solid fa-check text-white small"></i>
       </div>
+      <div class="text-start">
+        <p class="fw-bold mb-0 text-dark" style="font-size: 12px;">ช่างซ่อมบอร์ดโดยตรง</p>
+        <p class="text-secondary mb-0" style="font-size: 10px;">เครื่องมือวิเคราะห์วงจรครบครัน</p>
+      </div>
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
