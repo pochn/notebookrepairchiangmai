@@ -54,7 +54,9 @@ body {
     .stat-card h3,
     .stat-card .fw-bold,
     .stat-card h4 {
-        font-size: 1.6rem !important; /* ~25.6px พอดีกล่อง */
+        /* ลดขนาดตัวเลขให้ไม่กินพื้นที่มากเกินไป */
+        font-size: 1.25rem !important; /* ~20px กระชับกว่าเดิม */
+        margin-bottom: 0.15rem;
     }
 
     .stat-card p,
@@ -147,6 +149,8 @@ body {
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
+    /* ลด padding เพื่อลดความสูงของกล่องสถิติตามคำขอ */
+    padding: 0.4rem 0.6rem;
 }
 
 .stat-card:hover {
