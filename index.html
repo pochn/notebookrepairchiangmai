@@ -22,75 +22,97 @@
     <!-- Placeholder สำหรับ Navbar -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Hero Section (ส่วนหัวหลัก) -->
-    <!-- Hero Section (Phase 2 Updated) -->
-<section id="home" class="hero-section text-white">
-  <div class="container position-relative z-1">
+    
+<!-- Hero Section (เวอร์ชันปรับปุ่มและกรอบรับ-ส่งตามภาพตัวอย่าง) -->
+<!-- Hero Section (เวอร์ชันสว่าง สะอาดตา สไตล์ศูนย์บริการพรีเมียม) -->
+<section id="home" class="hero-section py-5" style="background: linear-gradient(180deg, #F8FAFC 0%, #EDF2F7 100%);">
+  <div class="container position-relative z-1 py-3">
     <div class="row align-items-center g-4 g-lg-5">
       
-      <!-- Text Content -->
+      <!-- ฝั่งซ้าย: ข้อมูลและจุดขาย -->
       <div class="col-lg-6">
         
-        <!-- Badge -->
-        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill hero-badge mb-3">
+        <!-- Badge หัวข้อ -->
+        <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3 shadow-sm bg-white border border-primary-subtle">
           <i class="fa-solid fa-bolt text-warning"></i>
-          <span>ร้านซ่อมโน๊ตบุ๊คมาตรฐานเชียงใหม่</span>
+          <span class="fw-bold text-dark" style="font-size: 13px;">ร้านซ่อมโน๊ตบุ๊คมืออาชีพ เชียงใหม่</span>
         </div>
         
-        <!-- Title & Description -->
-        <h1 class="hero-title mb-3">
+        <!-- Title & Subtitle -->
+        <h1 class="hero-title fw-extrabold mb-3 display-5 text-dark">
           ซ่อมโน๊ตบุ๊ค <span class="text-primary">เชียงใหม่</span>
         </h1>
         
-     <!-- Title & Description (เวอร์ชันอ่านง่าย เว้นสเปซสวยงาม) -->
-<p class="text-light opacity-90 fs-6 mb-3" style="line-height: 1.8;">
-  บริการซ่อมโน๊ตบุ๊ค PC และ Gaming คอมพิวเตอร์ประกอบ ครบวงจรในเชียงใหม่ พร้อมบริการส่งซ่อมออนไลน์ทั่วประเทศ
-</p>
-
+        <p class="text-secondary fs-6 mb-4" style="line-height: 1.7;">
+          บริการซ่อมโน๊ตบุ๊ค PC และ Gaming คอมพิวเตอร์ประกอบ<br class="d-none d-md-block">
+          ครบวงจรในเชียงใหม่ พร้อมบริการส่งซ่อมออนไลน์ทั่วประเทศ
+        </p>
         
-        <!-- Highlights List (เรียงลงมาตามลำดับ) -->
-        <div class="row g-2 mb-4 text-light">
-          <div class="col-12 hero-check-item">
-            <i class="fa-solid fa-circle-check me-2 text-primary"></i>ซ่อมเมนบอร์ดโน๊ตบุ๊ค PC และเครื่อง Gaming ทุกรุ่น
+        <!-- Highlights Checklist -->
+        <div class="d-flex flex-column gap-2.5 mb-4 text-dark fw-medium">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-circle-check text-primary me-2.5 fs-5"></i>
+            <span>ซ่อมเมนบอร์ดโน๊ตบุ๊ค PC และเครื่อง Gaming ทุกรุ่น</span>
           </div>
-          <div class="col-12 hero-check-item">
-            <i class="fa-solid fa-circle-check me-2 text-primary"></i>อาการเปิดไม่ติด ไฟไม่เข้าเครื่อง ไล่วงจรตรงจุด
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-circle-check text-primary me-2.5 fs-5"></i>
+            <span>อาการเปิดไม่ติด ไฟไม่เข้าเครื่อง ไล่วงจรตรงจุด</span>
           </div>
-          <div class="col-12 hero-check-item">
-            <i class="fa-solid fa-circle-check me-2 text-primary"></i>ชาร์จไฟไม่เข้า หน้าจอแตก จอมืด จอเป็นเส้น
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-circle-check text-primary me-2.5 fs-5"></i>
+            <span>ชาร์จไฟไม่เข้า หน้าจอแตก จอมืด จอเป็นเส้น</span>
           </div>
-          <div class="col-12 hero-check-item">
-            <i class="fa-solid fa-circle-check me-2 text-primary"></i>เครื่องโดนน้ำ ของเหลวหกใส่ ช็อตไหม้ กู้ชีพได้
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-circle-check text-primary me-2.5 fs-5"></i>
+            <span>เครื่องโดนน้ำ ของเหลวหกใส่ ช็อตไหม้ กู้ชีพได้</span>
           </div>
         </div>
 
-        <!-- ระบุพื้นที่บริการ -->
-        <div class="mb-4 d-flex align-items-center gap-2" style="font-size: 13px;">
-          <i class="fa-solid fa-location-dot text-danger"></i>
-          <span class="text-secondary">
-            <strong>บริการรับ-ส่งเครื่องถึงบ้าน:</strong> สารภี • สันทราย • เมือง ช.ม. • หางดง • มช. • ราชภัฏ • พายัพ
-          </span>
+        <!-- กล่องการ์ด: บริการรับ-ส่งเครื่องถึงบ้าน (สไตล์สว่างสดใส) -->
+        <div class="p-3 mb-4 rounded-4 shadow-sm bg-white border border-primary border-opacity-25">
+          <div class="d-flex align-items-center gap-3">
+            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm" style="width: 46px; height: 46px;">
+              <i class="fa-solid fa-location-dot text-white fs-5"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold text-primary mb-1" style="font-size: 16px;">บริการรับ-ส่งเครื่องถึงบ้าน</h6>
+              <p class="text-secondary small mb-0" style="font-size: 13.5px; letter-spacing: 0.2px;">
+                สารภี • สันทราย • เมือง ช.ม. • หางดง • มช. • ราชภัฏ • พายัพ
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- CTA Buttons -->
-        <div class="d-flex flex-wrap gap-3">
-          <a href="https://line.me/R/ti/p/%40935pcssr" target="_blank" class="btn btn-primary hero-cta-btn rounded-pill px-4 py-2.5 fw-bold shadow">
-            <i class="fa-brands fa-line me-2"></i>ติดต่อสอบถาม (LINE)
-          </a>
-          <a href="tel:063-594-2636" class="btn btn-outline-light hero-cta-btn rounded-pill px-4 py-2.5 fw-bold">
-            <i class="fa-solid fa-phone me-2"></i>โทรเลย 063-594-2636
-          </a>
-          <a href="https://script.google.com/macros/s/AKfycbxPL98eVgrYdhkeU9Awbu2HyatHxaI84M3uvvWpniMcIbWOswydxYtzsUQgWecf5kVn/exec?page=customer" target="_blank" class="btn btn-success hero-cta-btn rounded-pill px-4 py-2.5 fw-bold shadow" style="background-color: #ff7b00; border-color: #ff7b00;">
-            <i class="fa-solid fa-paper-plane me-2"></i>รับงานซ่อมออนไลน์
-          </a>
+        <!-- ปุ่ม CTA 3 ปุ่มเรียงแนวนอน (สวยคมบนพื้นสว่าง) -->
+        <div class="row g-2 pt-1">
+          <!-- ปุ่ม LINE (เขียวสด) -->
+          <div class="col-12 col-sm-4">
+            <a href="https://line.me/R/ti/p/%40935pcssr" target="_blank" class="btn w-100 rounded-pill py-2.5 fw-bold d-flex align-items-center justify-content-center text-white border-0 shadow-sm" style="background-color: #00b900; font-size: 14px;">
+              <i class="fa-brands fa-line me-2 fs-5"></i>(LINE)
+            </a>
+          </div>
+
+          <!-- ปุ่ม เบอร์โทร (กรอบน้ำเงิน/พื้นขาว) -->
+          <div class="col-12 col-sm-4">
+            <a href="tel:063-594-2636" class="btn w-100 rounded-pill py-2.5 fw-bold d-flex align-items-center justify-content-center text-primary bg-white border border-primary border-opacity-50 shadow-sm" style="font-size: 14px;">
+              <i class="fa-solid fa-phone me-2 fs-6"></i>063-594-2636
+            </a>
+          </div>
+
+          <!-- ปุ่ม ส่งซ่อมออนไลน์ (สีส้มสดใส) -->
+          <div class="col-12 col-sm-4">
+            <a href="https://script.google.com/macros/s/AKfycbxPL98eVgrYdhkeU9Awbu2HyatHxaI84M3uvvWpniMcIbWOswydxYtzsUQgWecf5kVn/exec?page=customer" target="_blank" class="btn w-100 rounded-pill py-2.5 fw-bold d-flex align-items-center justify-content-center text-white border-0 shadow-sm" style="background-color: #ff6b00; font-size: 14px;">
+              <i class="fa-solid fa-paper-plane me-2 fs-6"></i>ส่งซ่อมออนไลน์
+            </a>
+          </div>
         </div>
 
       </div>
 
-      <!-- Hero Image -->
+      <!-- ฝั่งขวา: รูปถ่ายโต๊ะซ่อม -->
       <div class="col-lg-6 text-center">
-        <div class="hero-img-wrapper d-inline-block">
-          <img src="images/hero.png" class="img-fluid hero-img" alt="โต๊ะงานซ่อมโน๊ตบุ๊คเชียงใหม่">
+        <div class="p-2 bg-white rounded-4 shadow-lg border border-light">
+          <img src="images/hero.png" class="img-fluid rounded-3" alt="โต๊ะงานซ่อมโน๊ตบุ๊คเชียงใหม่" style="max-height: 420px; object-fit: cover; width: 100%;">
         </div>
       </div>
 
@@ -110,118 +132,30 @@
                     </div>
                     <div class="col-6 col-md">
                         <div class="text-primary fs-3 mb-1"><i class="fa-solid fa-laptop"></i></div>
-                        <h4 class="fw-bold mb-0">4,000+</h4>
-                        <p class="text-muted small mb-0">เครื่อง ที่ซ่อมสำเร็จ</p>
+                        <h4 class="fw-bold mb-0">3,000+</h4>
+                        <p class="text-muted small mb-0">เครื่องที่ซ่อม</p>
                     </div>
                     <div class="col-6 col-md">
                         <div class="text-primary fs-3 mb-1"><i class="fa-solid fa-shield-halved"></i></div>
-                        <h4 class="fw-bold mb-0">6 เดือน</h4>
+                        <h4 class="fw-bold mb-0">3-6 เดือน</h4>
                         <p class="text-muted small mb-0">รับประกันงานซ่อม</p>
                     </div>
                     <div class="col-6 col-md">
                         <div class="text-primary fs-3 mb-1"><i class="fa-solid fa-users"></i></div>
                         <h4 class="fw-bold mb-0">98%</h4>
-                        <p class="text-muted small mb-0">ลูกค้ากลับมาใช้บริการ</p>
+                        <p class="text-muted small mb-0">ลูกค้าพอใจ</p>
                     </div>
                     <div class="col-12 col-md">
                         <div class="text-warning fs-3 mb-1"><i class="fa-solid fa-star"></i></div>
-                        <h4 class="fw-bold mb-0">5.0</h4>
-                        <p class="text-muted small mb-0">คะแนนรีวิวจากลูกค้า</p>
+                        <h4 class="fw-bold mb-0">4.9</h4>
+                        <p class="text-muted small mb-0">คะแนนรีวิว</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Brand Grid (Phase 3 Updated) -->
-    <section class="brand-section py-5">
-        <div class="container">
-            <div class="text-center mb-4">
-                <span class="badge bg-warning-subtle text-warning-emphasis px-3 py-2 rounded-pill fw-medium mb-2" style="font-size: 12px; border: 1px solid rgba(255, 123, 0, 0.2);">
-                    <i class="fa-solid fa-laptop me-1"></i> SUPPORTED BRANDS
-                </span>
-                <h5 class="fw-bold text-dark mb-1">แบรนด์ที่เรารับซ่อม</h5>
-                <p class="text-muted small mb-0">รับซ่อมและอัพเกรดโน๊ตบุ๊คทุกยี่ห้อชั้นนำ มีอะไหล่ตรงรุ่นพร้อมเปลี่ยน</p>
-            </div>
-
-            <div class="row g-3 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4">
-                <!-- ASUS -->
-                <div class="col">
-                    <div class="brand-card h-100 text-center">
-                        <div>
-                            <span class="brand-name d-block">ASUS</span>
-                            <span class="brand-subtext">ROG / TUF / ZenBook</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- HP -->
-                <div class="col">
-                    <div class="brand-card h-100 text-center">
-                        <div>
-                            <span class="brand-name d-block">HP</span>
-                            <span class="brand-subtext">Victus / Pavilion / OMEN</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- DELL -->
-                <div class="col">
-                    <div class="brand-card h-100 text-center">
-                        <div>
-                            <span class="brand-name d-block">DELL</span>
-                            <span class="brand-subtext">Inspiron / Vostro / Alienware</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- LENOVO -->
-                <div class="col">
-                    <div class="brand-card h-100 text-center">
-                        <div>
-                            <span class="brand-name d-block">LENOVO</span>
-                            <span class="brand-subtext">Legion / Ideapad / ThinkPad</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- ACER -->
-                <div class="col">
-                    <div class="brand-card h-100 text-center">
-                        <div>
-                            <span class="brand-name d-block">ACER</span>
-                            <span class="brand-subtext">Nitro / Predator / Aspire</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- MSI -->
-                <div class="col">
-                    <div class="brand-card h-100 text-center">
-                        <div>
-                            <span class="brand-name d-block">MSI</span>
-                            <span class="brand-subtext">Katana / GF Series / Modern</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- GIGABYTE -->
-                <div class="col">
-                    <div class="brand-card h-100 text-center">
-                        <div>
-                            <span class="brand-name d-block">GIGABYTE</span>
-                            <span class="brand-subtext">AORUS / G5 Series</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- HUAWEI / APPLE -->
-                <div class="col">
-                    <div class="brand-card h-100 text-center">
-                        <div>
-                            <span class="brand-name d-block">HUAWEI / MAC</span>
-                            <span class="brand-subtext">MateBook / MacBook</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
+       <!-- Services Section -->
     <section id="services" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
@@ -274,46 +208,7 @@
         </div>
     </section>
 
-    <!-- Work Process -->
-    <section class="py-5 bg-dark text-white">
-        <div class="container text-center">
-            <h3 class="fw-bold mb-5">ขั้นตอนการซ่อมของเรา</h3>
-            <div class="row g-4">
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="process-icon-box"><i class="fa-solid fa-bag-shopping"></i></div>
-                    <h6 class="fw-bold">1. รับเครื่อง</h6>
-                    <p class="small text-secondary mb-0">ตรวจเช็คอาการเบื้องต้น</p>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="process-icon-box"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <h6 class="fw-bold">2. ตรวจเช็ค</h6>
-                    <p class="small text-secondary mb-0">ตรวจหาสาเหตุอย่างละเอียด</p>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="process-icon-box"><i class="fa-solid fa-clipboard-check"></i></div>
-                    <h6 class="fw-bold">3. แจ้งราคา</h6>
-                    <p class="small text-secondary mb-0">ประเมินราคาก่อนทำ</p>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="process-icon-box"><i class="fa-solid fa-wrench"></i></div>
-                    <h6 class="fw-bold">4. ดำเนินการซ่อม</h6>
-                    <p class="small text-secondary mb-0">ซ่อมด้วยอะไหล่มาตรฐาน</p>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="process-icon-box"><i class="fa-solid fa-vial-circle-check"></i></div>
-                    <h6 class="fw-bold">5. ทดสอบเครื่อง</h6>
-                    <p class="small text-secondary mb-0">เทสการทำงานทุกฟังก์ชัน</p>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="process-icon-box"><i class="fa-solid fa-circle-check"></i></div>
-                    <h6 class="fw-bold">6. ส่งมอบเครื่อง</h6>
-                    <p class="small text-secondary mb-0">พร้อมใบรับประกัน</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Content Area: ผลงานซ่อม (ซ้าย) + บทความ (ขวา) -->
+        <!-- Content Area: ผลงานซ่อม (ซ้าย) + บทความ (ขวา) -->
     <section class="py-5">
         <div class="container">
             <div class="row g-4">
@@ -453,62 +348,7 @@
                             </div>
                         </div>
 
-                        <!-- ข้อ 4 -->
-                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    โน๊ตบุ๊คโดนน้ำต้องทำอย่างไร?
-                                </button>
-                            </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    แนะนำให้ปิดเครื่องทันที ถอดสายชาร์จออก (ถ้าถอดแบตเตอรี่ได้ให้ถอดออกด้วย) และหลีกเลี่ยงการเปิดใช้งานซ้ำหรือเปิดเครื่องเพื่อลองเช็คเด็ดขาด จากนั้นควรรีบนำเครื่องเข้าส่งตรวจเช็คโดยเร็วที่สุด เพื่อลดความเสียหายที่จะเกิดกับเมนบอร์ดและอุปกรณ์ภายในครับ
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ข้อ 5 -->
-                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    มีประกันหลังซ่อมหรือไม่?
-                                </button>
-                            </h2>
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    มีประกันงานซ่อมให้ครับ ระยะเวลาประกันจะขึ้นอยู่กับประเภทของงานซ่อมและชิ้นส่วนอะไหล่ที่เปลี่ยน โดยช่างจะแจ้งรายละเอียดและเงื่อนไขการรับประกันให้ลูกค้าทราบอย่างชัดเจนก่อนส่งมอบเครื่องคืนครับ
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ข้อ 6 -->
-                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-                                    สามารถนำโน๊ตบุ๊คมาอัปเกรด SSD หรือ RAM ได้หรือไม่?
-                                </button>
-                            </h2>
-                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    ได้แน่นอนครับ เรามีบริการอัปเกรดเพิ่มความเร็วด้วย SSD และเพิ่มความจุ RAM เพื่อให้คอมพิวเตอร์ของคุณกลับมาทำงานและเล่นเกมได้ลื่นไหลขึ้น พร้อมให้คำแนะนำสเปกที่คุ้มค่าและเหมาะสมกับการใช้งานของลูกค้าที่สุดครับ
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ข้อ 7 -->
-                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
-                                    รับซ่อมคอมพิวเตอร์และโน๊ตบุ๊คยี่ห้อไหนบ้าง?
-                                </button>
-                            </h2>
-                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    เรารับซ่อมโน๊ตบุ๊ค คอมพิวเตอร์ประกอบ และเครื่อง Gaming หลากหลายแบรนด์ชั้นนำครับ เช่น ASUS, Acer, Lenovo, HP, Dell, MSI, Gigabyte และ Huawei (หมายเหตุ: ร้านเราเน้นบริการเครื่องฝั่ง Windows OS และไม่ได้รับซ่อมเครื่อง Apple MacBook ครับ)
-                                </div>
-                            </div>
-                        </div>
-
+                    
                         <!-- ข้อ 8 -->
                         <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
                             <h2 class="accordion-header">
@@ -546,24 +386,26 @@
                             </h2>
                             <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    สำหรับลูกค้าในพื้นที่เชียงใหม่ (สารภี, สันทราย, เมือง ช.ม., หางดง และโซน มหาลัย) เรามีบริการรับ-ส่งเครื่องให้ถึงที่ครับ ส่วนลูกค้าที่อยู่ต่างจังหวัด สามารถแพ็กเครื่องส่งผ่านขนส่งเอกชนมายังร้านได้เลยครับ เมื่อเครื่องถึงร้าน ช่างจะเช็คอาการแล้วแจ้งผลพร้อมค่าใช้จ่ายให้ทราบก่อนเริ่มงานทันทีครับ
+                                    สำหรับลูกค้าในพื้นที่เชียงใหม่ เช่น สารภี สันทราย เมืองเชียงใหม่ หางดง และโซนมหาวิทยาลัย
+        เรามีบริการรับ-ส่งเครื่องให้ถึงที่ครับ
+
+        สำหรับลูกค้าต่างจังหวัด สามารถแพ็กเครื่องส่งผ่านขนส่งเอกชนมายังร้านได้เลยครับ
+        เมื่อเครื่องถึงร้าน ช่างจะตรวจเช็คอาการและแจ้งผลพร้อมประเมินค่าใช้จ่ายให้ทราบก่อนเริ่มซ่อมทุกครั้งครับ
+
+        <div class="mt-3">
+            <a href="https://script.google.com/macros/s/AKfycbxPL98eVgrYdhkeU9Awbu2HyatHxaI84M3uvvWpniMcIbWOswydxYtzsUQgWecf5kVn/exec?page=customer"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-primary btn-sm rounded-pill px-3">
+                <i class="fa-solid fa-paper-plane me-1"></i>
+                ส่งซ่อมออนไลน์
+            </a>
+        </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- ข้อ 11 -->
-                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
-                                    ทางร้านใช้อะไหล่แท้หรือไม่ และออกใบเสร็จได้ไหม?
-                                </button>
-                            </h2>
-                            <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    เราคัดเลือกอะไหล่คุณภาพสูง มีการแจ้งรายละเอียดเกรดอะไหล่ให้ลูกค้าทราบก่อนเปลี่ยนทุกครั้ง เพื่อให้เหมาะสมกับงบประมาณและการใช้งานของลูกค้าครับ และทางร้านสามารถออกใบเสร็จรับเงินให้ได้ครับ สำหรับเอกสารเพิ่มเติมอื่นๆ สามารถสอบถามช่างโดยตรงได้เลยครับ
-                                </div>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>

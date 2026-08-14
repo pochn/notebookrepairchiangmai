@@ -42,7 +42,7 @@ function renderRepairs(repairs) {
     let html = "";
     repairs.forEach(item => {
         html += `
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="portfolio-card shadow-sm d-flex flex-column">
                     <div class="portfolio-img-container">
                         <img src="${item.image}" class="portfolio-img" alt="${item.title}" onerror="this.src='https://placehold.co/400x300/1c2541/ffffff?text=${item.brand}+Repair'">
