@@ -1,6 +1,14 @@
 {
   "repairs": [
     {
+      "id": "repair-8855",
+      "brand": "Ocha",
+      "title": "Ocha POS ระบบเครื่องคิดเงินและบริหารจัดการร้านอาหาร",
+      "symptom": "จอภาพสั่น และจอเป็นเส้นด้านล่าง",
+      "image": "images/ocha/ocha-pos-/ocha-pos--after-dn2.webp",
+      "link": "ocha-pos--repair-chiangmai.html"
+    },
+    {
       "id": "repair-2869",
       "brand": "Acer",
       "title": "Acer F5-573G",
