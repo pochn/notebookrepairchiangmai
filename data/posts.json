@@ -1,6 +1,14 @@
 {
   "repairs": [
     {
+      "id": "repair-5511",
+      "brand": "Laptop",
+      "title": " Asus TUF Dash F15 FX516PR",
+      "symptom": "เปิดไม่ติด ระบบไฟบนเมนบอร์ดช็อต",
+      "image": "images/laptop/-asus-tuf-dash-f15-fx516pr/-asus-tuf-dash-f15-fx516pr-after-4wx.webp",
+      "link": "articles/-asus-tuf-dash-f15-fx516pr-repair-chiangmai.html"
+    },
+    {
       "id": "repair-8855",
       "brand": "Ocha",
       "title": "Ocha POS ระบบเครื่องคิดเงินและบริหารจัดการร้านอาหาร",
@@ -63,7 +71,7 @@
       "title": "อัพเกรด SSD M.2 เพิ่มความเร็ว Acer Nitro 5 AN515 พร้อมทำความสะอาดพัดลม & เปลี่ยนซิลิโคนระบายความร้อนเต็มระบบ",
       "date": "15 ก.ค. 2026",
       "image": "images/ACER/Nitro-5-Upgrading-SSD/Upgrading-a-laptop-acer-SSD.webp",
-            "link": "articles/acer-nitro-5-an515-upgrade-ssd-m2-chiangmai.html"
+      "link": "articles/acer-nitro-5-an515-upgrade-ssd-m2-chiangmai.html"
     },
     {
       "id": "art-2",
