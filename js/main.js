@@ -7,15 +7,57 @@ document.addEventListener("DOMContentLoaded", function () {
     loadPostsData();
 });
 
+// Resolve asset paths correctly whether page is in root or inside /articles/
+function resolveAssetPath(filePath) {
+    if (!filePath) return filePath;
+    if (filePath.startsWith("http://") || filePath.startsWith("https://") || filePath.startsWith("/")) return filePath;
+
+    const currentPath = window.location.pathname || "";
+    const inArticlesFolder = /\/articles\//i.test(currentPath) || currentPath.endsWith("/articles");
+
+    if (inArticlesFolder && !filePath.startsWith("../")) {
+        return "../" + filePath.replace(/^\.\//, "");
+    }
+
+    return filePath;
+}
+
+function normalizeComponentPaths(html) {
+    if (!html) return html;
+
+    const currentPath = window.location.pathname || "";
+    const inArticlesFolder = /\/articles\//i.test(currentPath) || currentPath.endsWith("/articles");
+    if (!inArticlesFolder) return html;
+
+    const template = document.createElement('template');
+    template.innerHTML = html;
+
+    template.content.querySelectorAll('a[href], img[src]').forEach(node => {
+        const attr = node.hasAttribute('href') ? 'href' : 'src';
+        const value = node.getAttribute(attr);
+
+        if (!value || value.startsWith('http://') || value.startsWith('https://') || value.startsWith('#') || value.startsWith('/') || value.startsWith('../') || value.startsWith('data:') || value.startsWith('mailto:') || value.startsWith('tel:')) {
+            return;
+        }
+
+        const normalized = value.startsWith('./') ? value.substring(2) : value;
+        if (normalized === 'index.html' || normalized.startsWith('index.html') || normalized === 'portfolio.html' || normalized.startsWith('portfolio.html') || normalized.startsWith('images/') || normalized.startsWith('css/') || normalized.startsWith('js/') || normalized.startsWith('components/')) {
+            node.setAttribute(attr, '../' + normalized);
+        }
+    });
+
+    return template.innerHTML;
+}
+
 // ฟังก์ชันโหลด HTML Components
 function loadComponent(elementId, filePath) {
-    fetch(filePath)
+    fetch(resolveAssetPath(filePath))
         .then(response => {
             if (!response.ok) throw new Error("Network response was not ok");
             return response.text();
         })
         .then(data => {
-            document.getElementById(elementId).innerHTML = data;
+            document.getElementById(elementId).innerHTML = normalizeComponentPaths(data);
         })
         .catch(error => {
             console.error("Error loading component:", error);
@@ -24,7 +66,7 @@ function loadComponent(elementId, filePath) {
 
 // ฟังก์ชันดึงข้อมูลเคสซ่อมและบทความจาก JSON
 function loadPostsData() {
-    fetch("data/posts.json")
+    fetch(resolveAssetPath("data/posts.json"))
         .then(response => response.json())
         .then(data => {
             renderRepairs(data.repairs);
@@ -90,6 +132,41 @@ function newestFirst(arr) {
     return arr.slice().reverse();
 }
 
+// Normalize links to avoid duplicated "articles/articles/..." and keep
+// root/article pages resolving to the correct HTML file.
+function normalizeArticleHrefLink(link) {
+    if (!link) return '#';
+    const l = String(link).trim();
+    if (!l) return '#';
+    if (l.startsWith('http://') || l.startsWith('https://') || l.startsWith('/')) return l;
+    const cleaned = l.replace(/^\.\//, '').replace(/^\/+/,'').replace(/^articles\//i, '');
+    if (!cleaned || cleaned === '#') return '#';
+    return cleaned;
+}
+
+function makeArticleHref(link) {
+    const cleaned = normalizeArticleHrefLink(link);
+    if (cleaned === '#') return '#';
+    if (cleaned.startsWith('http://') || cleaned.startsWith('https://') || cleaned.startsWith('/')) return cleaned;
+    return 'articles/' + cleaned.replace(/^articles\//i, '');
+}
+
+function normalizeArticleImagePath(imagePath) {
+    if (!imagePath) return imagePath;
+    const value = String(imagePath).trim();
+    if (!value || value.startsWith('http://') || value.startsWith('https://') || value.startsWith('/') || value.startsWith('../') || value.startsWith('data:')) return value;
+
+    const cleaned = value.replace(/^\.\//, '').replace(/^\/+/,'').replace(/^articles\//i, '');
+    const currentPath = window.location.pathname || '';
+    const inArticlesFolder = /\/articles\//i.test(currentPath) || currentPath.endsWith('/articles');
+
+    if (inArticlesFolder) {
+        return '../' + cleaned.replace(/^images\//i, 'images/');
+    }
+
+    return cleaned.startsWith('images/') ? cleaned : 'images/' + cleaned;
+}
+
 // ฟังก์ชันแสดงผลงานซ่อม (ฝั่งซ้าย)
 // ฟังก์ชันแสดงผลงานซ่อม (Phase 4: Magazine Style Card)
 function renderRepairs(repairs) {
@@ -101,18 +178,20 @@ function renderRepairs(repairs) {
 
     let html = "";
     items.forEach(item => {
+        const href = makeArticleHref(item.link);
+        const imageSrc = normalizeArticleImagePath(item.image);
         html += `
             <div class="col-md-4">
                 <div class="portfolio-card shadow-sm d-flex flex-column">
                     <div class="portfolio-img-container">
-                        <img src="${item.image}" class="portfolio-img" alt="${item.title}" onerror="this.src='https://placehold.co/400x300/1c2541/ffffff?text=${item.brand}+Repair'">
+                        <img src="${imageSrc}" class="portfolio-img" alt="${item.title}" onerror="this.src='https://placehold.co/400x300/1c2541/ffffff?text=${item.brand}+Repair'">
                         <span class="portfolio-brand-badge"><i class="fa-solid fa-laptop me-1"></i>${item.brand}</span>
                         <span class="portfolio-status-badge"><i class="fa-solid fa-check me-1"></i>ซ่อมสำเร็จ</span>
                     </div>
                     <div class="portfolio-body d-flex flex-column flex-grow-1">
                         <h6 class="portfolio-title">${item.title}</h6>
                         <p class="portfolio-symptom flex-grow-1">${item.symptom}</p>
-                        <a href="${item.link}" class="btn btn-outline-secondary btn-sm w-100 portfolio-btn d-flex align-items-center justify-content-center gap-1">
+                        <a href="${href}" class="btn btn-outline-secondary btn-sm w-100 portfolio-btn d-flex align-items-center justify-content-center gap-1">
                             <span>อ่านเคสซ่อมนี้</span>
                             <i class="fa-solid fa-arrow-right fs-xs"></i>
                         </a>
@@ -135,11 +214,13 @@ function renderArticles(articles) {
 
     let html = "";
     items.forEach(item => {
+        const href = makeArticleHref(item.link);
+        const imageSrc = normalizeArticleImagePath(item.image);
         html += `
-            <a href="${item.link}" class="text-decoration-none text-dark d-block">
+            <a href="${href}" class="text-decoration-none text-dark d-block">
                 <div class="article-item">
                     <div class="article-thumb-wrapper">
-                        <img src="${item.image}" class="article-thumb" alt="${item.title}" onerror="this.src='https://placehold.co/200x150/1c2541/ffffff?text=Article'">
+                        <img src="${imageSrc}" class="article-thumb" alt="${item.title}" onerror="this.src='https://placehold.co/200x150/1c2541/ffffff?text=Article'">
                         <span class="article-category-badge">${item.category || 'เกร็ดความรู้'}</span>
                     </div>
                     <div class="article-content">

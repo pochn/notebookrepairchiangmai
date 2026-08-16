@@ -6,7 +6,7 @@
       "title": "Ocha POS ระบบเครื่องคิดเงินและบริหารจัดการร้านอาหาร",
       "symptom": "จอภาพสั่น และจอเป็นเส้นด้านล่าง",
       "image": "images/ocha/ocha-pos-/ocha-pos--after-dn2.webp",
-      "link": "ocha-pos--repair-chiangmai.html"
+      "link": "articles/ocha-pos--repair-chiangmai.html"
     },
     {
       "id": "repair-2869",
@@ -14,7 +14,7 @@
       "title": "Acer F5-573G",
       "symptom": "ภาพไม่ขึ้นที่หน้าจอ ( จอดำสนิท / มีไฟเข้า )",
       "image": "images/acer/acer-f5-573g/acer-f5-573g-after-sja.webp",
-      "link": "acer-f5-573g-repair-chiangmai.html"
+      "link": "articles/acer-f5-573g-repair-chiangmai.html"
     },
     {
       "id": "repair-6736",
@@ -22,7 +22,7 @@
       "title": "GL542LI",
       "symptom": "คีย์บอร์ดกดไม่ได้บางปุ่ม คีย์บอร์ดเสีย",
       "image": "images/gl542lihn053t/gl542li-hn053t/gl542li-hn053t-after-llc.webp",
-      "link": "gl542li-hn053t-repair-chiangmai.html"
+      "link": "articles/gl542li-hn053t-repair-chiangmai.html"
     },
     {
       "id": "repair-5",
@@ -30,7 +30,7 @@
       "title": "GL553VD",
       "symptom": "เปลี่ยนจอโน๊ตบุ๊ค Asus GL553VD",
       "image": "images/Asus/GL553VD/Asus-gl553vd-screen.webp",
-      "link": "asus-gl553vd-screen-replacement.html"
+      "link": "articles/asus-gl553vd-screen-replacement.html"
     },
     {
       "id": "repair-1",
@@ -38,7 +38,7 @@
       "title": "Lenovo Ideapad 320S",
       "symptom": "อาการเปิดไม่ติด ไฟไม่เข้า เปลี่ยน MOSFET",
       "image": "images/Lenovo/lenovo-320s/lenovo-320s-repair-complete-display.webp",
-      "link": "lenovo-320s-power-on-repair-chiangmai.html"
+      "link": "articles/lenovo-320s-power-on-repair-chiangmai.html"
     },
     {
       "id": "repair-3",
@@ -46,7 +46,7 @@
       "title": "ACER Nitro 5",
       "symptom": "เครื่องทำงานช้า Upgrade SSD พร้อมทำความสะอาดเต็มระบบ ฟรี!",
       "image": "images/ACER/Nitro-5-Upgrading-SSD/Upgrading-a-laptop-acer-SSD.webp",
-      "link": "acer-nitro-5-an515-upgrade-ssd-m2-chiangmai.html"
+      "link": "articles/acer-nitro-5-an515-upgrade-ssd-m2-chiangmai.html"
     },
     {
       "id": "repair-4",
@@ -54,7 +54,7 @@
       "title": "Dell Vostro 3750",
       "symptom": "จอมีอาการสั่น มีเส้นขึ้นด้านล่างของจอ",
       "image": "images/DELL/Dell-Vostro/dell-vostro-3750-screen-replacement-chiangmai.webp",
-      "link": "dell-vostro-3750-screen-replacement-chiangmai.html"
+      "link": "articles/dell-vostro-3750-screen-replacement-chiangmai.html"
     }
   ],
   "articles": [
@@ -63,28 +63,28 @@
       "title": "อัพเกรด SSD M.2 เพิ่มความเร็ว Acer Nitro 5 AN515 พร้อมทำความสะอาดพัดลม & เปลี่ยนซิลิโคนระบายความร้อนเต็มระบบ",
       "date": "15 ก.ค. 2026",
       "image": "images/ACER/Nitro-5-Upgrading-SSD/Upgrading-a-laptop-acer-SSD.webp",
-      "link": "acer-nitro-5-an515-upgrade-ssd-m2-chiangmai.html"
+            "link": "articles/acer-nitro-5-an515-upgrade-ssd-m2-chiangmai.html"
     },
     {
       "id": "art-2",
       "title": "อาการโน๊ตบุ๊คเปิดไม่ติด เกิดจากอะไรได้บ้าง?",
       "date": "10 ก.ค. 2026",
       "image": "images/articles/power-on-issues.webp",
-      "link": "article-power-issues.html"
+      "link": "articles/article-power-issues.html"
     },
     {
       "id": "art-3",
       "title": "SSD กับ HDD ต่างกันอย่างไร เลือกแบบไหนดีกว่ากัน",
       "date": "5 ก.ค. 2026",
       "image": "images/articles/ssd-vs-hdd.webp",
-      "link": "article-ssd-vs-hdd.html"
+      "link": "articles/article-ssd-vs-hdd.html"
     },
     {
       "id": "art-4",
       "title": "รวมปัญหาโน๊ตบุ๊คยอดฮิต ที่พบบ่อยและวิธีแก้ไข",
       "date": "1 ก.ค. 2026",
       "image": "images/articles/common-problems.webp",
-      "link": "article-common-problems.html"
+      "link": "articles/article-common-problems.html"
     }
   ]
 }

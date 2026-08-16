@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!container) return;
 
     // Load posts.json
-    fetch('data/posts.json')
+    fetch(resolveAssetPath ? resolveAssetPath('data/posts.json') : 'data/posts.json')
         .then(r => r.json())
         .then(data => {
             let repairs = Array.isArray(data.repairs) ? data.repairs.slice() : [];
@@ -66,9 +66,20 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             function renderCard(item) {
-                // Use item.id for linking to post.html?id=... ; fallback to item.link if id missing
-                const postHref = item.id ? `post.html?id=${encodeURIComponent(item.id)}` : (item.link || '#');
-                const img = item.image || 'https://placehold.co/400x300/1c2541/ffffff?text=Repair';
+                // Build href directly from the article/repair file path to avoid dead links
+                let postHref = '#';
+                if (item.link) {
+                    if (typeof window.normalizeArticleHrefLink === 'function') {
+                        postHref = window.normalizeArticleHrefLink(item.link);
+                        if (postHref !== '#') postHref = postHref.startsWith('http://') || postHref.startsWith('https://') || postHref.startsWith('/') ? postHref : 'articles/' + postHref.replace(/^\.\//, '').replace(/^articles\//i, '');
+                    } else {
+                        const l = String(item.link).trim();
+                        if (l.startsWith('http://') || l.startsWith('https://') || l.startsWith('/')) postHref = l;
+                        else if (l.startsWith('articles/')) postHref = l;
+                        else postHref = 'articles/' + l.replace(/^\.\//, '');
+                    }
+                }
+                const img = typeof window.normalizeArticleImagePath === 'function' ? window.normalizeArticleImagePath(item.image) : (item.image || 'https://placehold.co/400x300/1c2541/ffffff?text=Repair');
                 // optionally show date if present
                 const dateLabel = item.date ? `<small class="text-muted">${item.date}</small>` : '';
 
