@@ -18,7 +18,7 @@
     <div class="container" style="max-width: 900px;">
         <div class="card card-custom p-4 p-md-5 bg-white">
             <h2 class="fw-bold text-dark mb-1"><i class="fa-solid fa-pen-to-square text-primary me-2"></i>ระบบสร้างบทความงานซ่อม (Auto-GitHub Publish)</h2>
-            <p class="text-muted mb-4">กรอกรายละเอียด แนบรูปภาพ ระบบจะย่อเป็น WebP และบันทึกลง GitHub พร้อมอัปเดต posts.json อัตโนมัติ</p>
+            <p class="text-muted mb-4">กรอกรายละเอียด แนบรูปภาพ ระบบจะย่อเป็น WebP และบันทึกไฟล์บทความไว้ที่ <strong>/articles/</strong> พร้อมอัปเดต posts.json อัตโนมัติ</p>
             
             <form id="articleForm">
                 <div class="row g-3 mb-4">
@@ -107,6 +107,15 @@
         // *** ใส่ Web App URL ของ Google Apps Script ของคุณตรงนี้ ***
         const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz6dc9paohinnek2WR74qoMFHi1TFXhH-ppSulnm8P15mF85ViamtLu5xi8vOT60w3XxQ/exec";
 
+        function normalizeArticleFileName(value) {
+            if (!value) return '';
+            return String(value)
+                .trim()
+                .replace(/^\/+/, '')
+                .replace(/^articles\//i, '')
+                .replace(/\\/g, '/');
+        }
+
         document.getElementById('brandModel').addEventListener('input', function(e) {
             const slug = e.target.value.toLowerCase()
                 .replace(/[^a-z0-9 -]/g, '')
@@ -176,9 +185,12 @@
             alertBox.className = "alert alert-info mt-3 d-block";
             alertBox.innerText = "ระบบกำลังส่งไฟล์รูปภาพและไฟล์บทความขึ้น GitHub กรุณารอประมาณ 5-10 วินาที...";
 
+            const rawFileName = normalizeArticleFileName(document.getElementById('fileNameLink').value);
+            const safeFileName = rawFileName || 'article-repair-chiangmai.html';
             const payload = {
                 brandModel: document.getElementById('brandModel').value,
-                fileNameLink: document.getElementById('fileNameLink').value,
+                fileNameLink: safeFileName,
+                outputFolder: 'articles',
                 articleTitle: document.getElementById('articleTitle').value,
                 symptom: document.getElementById('symptom').value,
                 solution: document.getElementById('solution').value,
@@ -201,9 +213,12 @@
                 const resData = await response.json();
 
                 if (resData.status === "success") {
+                    const publishedFile = (resData.articleUrl || safeFileName || '').replace(/^\/+/, '').replace(/^articles\//i, '');
+                    const publishedUrl = `https://pochn.github.io/notebookrepairchiangmai/articles/${publishedFile}`;
+
                     alertBox.className = "alert alert-success mt-3 d-block";
                     alertBox.innerHTML = `<strong><i class="fa-solid fa-circle-check me-2"></i>สำเร็จ!</strong> เผยแพร่บทความเรียบร้อยแล้ว<br>
-                    <a href="https://pochn.github.io/notebookrepairchiangmai/${resData.articleUrl}" target="_blank" class="alert-link">คลิกที่นี่เพื่อดูหน้าบทความบนเว็บ</a>`;
+                    <a href="${publishedUrl}" target="_blank" class="alert-link">คลิกที่นี่เพื่อดูหน้าบทความบนเว็บ</a>`;
                     document.getElementById('articleForm').reset();
                 } else {
                     throw new Error(resData.message);

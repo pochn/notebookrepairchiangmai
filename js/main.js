@@ -115,7 +115,7 @@ function getItemTimestamp(item) {
     return null;
 }
 
-// เรียงรายการจากใหม่ไปเก่า (newest -> oldest). ถ้าไม่มีวันที่ จะกลับลำดับ
+// เรียงรายการจากใหม่ไปเก่า (newest -> oldest)
 function newestFirst(arr) {
     if (!Array.isArray(arr)) return [];
     const list = arr.map((item, idx) => ({item, idx, ts: getItemTimestamp(item)}));
@@ -128,12 +128,9 @@ function newestFirst(arr) {
         });
         return list.map(x => x.item);
     }
-    // ถ้าไม่มี timestamp ให้กลับลำดับ (สมมติว่า array เดิมเป็น oldest->newest)
     return arr.slice().reverse();
 }
 
-// Normalize links to avoid duplicated "articles/articles/..." and keep
-// root/article pages resolving to the correct HTML file.
 function normalizeArticleHrefLink(link) {
     if (!link) return '#';
     const l = String(link).trim();
@@ -148,6 +145,14 @@ function makeArticleHref(link) {
     const cleaned = normalizeArticleHrefLink(link);
     if (cleaned === '#') return '#';
     if (cleaned.startsWith('http://') || cleaned.startsWith('https://') || cleaned.startsWith('/')) return cleaned;
+
+    const currentPath = window.location.pathname || '';
+    const inArticlesFolder = /\/articles\//i.test(currentPath) || currentPath.endsWith('/articles');
+
+    if (inArticlesFolder) {
+        return cleaned.replace(/^articles\//i, '');
+    }
+
     return 'articles/' + cleaned.replace(/^articles\//i, '');
 }
 
@@ -167,13 +172,11 @@ function normalizeArticleImagePath(imagePath) {
     return cleaned.startsWith('images/') ? cleaned : 'images/' + cleaned;
 }
 
-// ฟังก์ชันแสดงผลงานซ่อม (ฝั่งซ้าย)
 // ฟังก์ชันแสดงผลงานซ่อม (Phase 4: Magazine Style Card)
 function renderRepairs(repairs) {
     const container = document.getElementById("repairs-container");
     if (!container) return;
 
-    // เรียงจากใหม่ไปเก่า แล้วจำกัดแสดงเฉพาะ 6 รายการล่าสุด
     const items = newestFirst(repairs).slice(0, 6);
 
     let html = "";
@@ -203,13 +206,11 @@ function renderRepairs(repairs) {
     container.innerHTML = html;
 }
 
-// ฟังก์ชันแสดงบทความล่าสุด (ฝั่งขวา)
 // ฟังก์ชันแสดงบทความ (Phase 5: Sidebar Style)
 function renderArticles(articles) {
     const container = document.getElementById("articles-container");
     if (!container) return;
 
-    // เรียงจากใหม่ไปเก่า แล้วแสดงสูงสุด 6 รายการ
     const items = newestFirst(articles).slice(0, 6);
 
     let html = "";
