@@ -83,23 +83,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 // optionally show date if present
                 const dateLabel = item.date ? `<small class="text-muted">${item.date}</small>` : '';
 
-                return `
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="ratio ratio-4x3">
-                                <img src="${img}" class="card-img-top object-fit-cover" alt="${escapeHtml(item.title||'') }" onerror="this.src='https://placehold.co/400x300/1c2541/ffffff?text=Repair'"/>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title mb-1">${escapeHtml(item.title || (item.brand || 'ผลงาน'))}</h5>
-                                <p class="card-text text-muted small mb-2 line-clamp-2">${escapeHtml(item.symptom || '')}</p>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <div>${dateLabel}</div>
-                                    <a href="${postHref}" class="btn btn-primary btn-sm">อ่านรายละเอียด</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
+               // คัดลอกเฉพาะส่วน return ของฟังก์ชัน renderCard ไปวางแทนที่ของเดิมใน js/portfolio.js
+return `
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+            <div class="ratio ratio-4x3">
+                <img src="${img}" class="card-img-top object-fit-cover" alt="${escapeHtml(item.title||'')}" onerror="this.src='https://placehold.co/400x300/1c2541/ffffff?text=Repair'"/>
+            </div>
+            <div class="card-body p-3 d-flex flex-column">
+                <h6 class="card-title fw-bold mb-1" style="font-size: 14px; line-height: 1.4;">${escapeHtml(item.title || (item.brand || 'ผลงาน'))}</h6>
+                <p class="card-text text-muted small mb-3 flex-grow-1" style="font-size: 12px; line-height: 1.4;">${escapeHtml(item.symptom || '')}</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top">
+                    <div>${dateLabel}</div>
+                    <a href="${postHref}" class="btn btn-primary btn-sm rounded-pill px-3" style="font-size: 12px;">อ่านรายละเอียด</a>
+                </div>
+            </div>
+        </div>
+    </div>
+`;
             }
 
         })

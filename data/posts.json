@@ -2,15 +2,15 @@
   "repairs": [
     {
       "id": "repair-5511",
-      "brand": "Laptop",
-      "title": " Asus TUF Dash F15 FX516PR",
+      "brand": "ASUS",
+      "title": "ASUS TUF Dash F15 FX516PR",
       "symptom": "เปิดไม่ติด ระบบไฟบนเมนบอร์ดช็อต",
       "image": "images/laptop/-asus-tuf-dash-f15-fx516pr/-asus-tuf-dash-f15-fx516pr-after-4wx.webp",
       "link": "articles/-asus-tuf-dash-f15-fx516pr-repair-chiangmai.html"
     },
     {
       "id": "repair-8855",
-      "brand": "Ocha",
+      "brand": "Ocha POS",
       "title": "Ocha POS ระบบเครื่องคิดเงินและบริหารจัดการร้านอาหาร",
       "symptom": "จอภาพสั่น และจอเป็นเส้นด้านล่าง",
       "image": "images/ocha/ocha-pos-/ocha-pos--after-dn2.webp",
@@ -18,7 +18,7 @@
     },
     {
       "id": "repair-2869",
-      "brand": "Acer",
+      "brand": "ACER",
       "title": "Acer F5-573G",
       "symptom": "ภาพไม่ขึ้นที่หน้าจอ ( จอดำสนิท / มีไฟเข้า )",
       "image": "images/acer/acer-f5-573g/acer-f5-573g-after-sja.webp",
@@ -26,8 +26,8 @@
     },
     {
       "id": "repair-6736",
-      "brand": "GL542LI-HN053T",
-      "title": "GL542LI",
+      "brand": "ASUS",
+      "title": "ASUS GL542LI-HN053T",
       "symptom": "คีย์บอร์ดกดไม่ได้บางปุ่ม คีย์บอร์ดเสีย",
       "image": "images/gl542lihn053t/gl542li-hn053t/gl542li-hn053t-after-llc.webp",
       "link": "articles/gl542li-hn053t-repair-chiangmai.html"
@@ -35,14 +35,14 @@
     {
       "id": "repair-5",
       "brand": "ASUS",
-      "title": "GL553VD",
-      "symptom": "เปลี่ยนจอโน๊ตบุ๊ค Asus GL553VD",
+      "title": "ASUS GL553VD",
+      "symptom": "เปลี่ยนจอโน๊ตบุ๊ค ASUS GL553VD",
       "image": "images/Asus/GL553VD/Asus-gl553vd-screen.webp",
       "link": "articles/asus-gl553vd-screen-replacement.html"
     },
     {
       "id": "repair-1",
-      "brand": "Lenovo",
+      "brand": "LENOVO",
       "title": "Lenovo Ideapad 320S",
       "symptom": "อาการเปิดไม่ติด ไฟไม่เข้า เปลี่ยน MOSFET",
       "image": "images/Lenovo/lenovo-320s/lenovo-320s-repair-complete-display.webp",
@@ -58,7 +58,7 @@
     },
     {
       "id": "repair-4",
-      "brand": "Dell",
+      "brand": "DELL",
       "title": "Dell Vostro 3750",
       "symptom": "จอมีอาการสั่น มีเส้นขึ้นด้านล่างของจอ",
       "image": "images/DELL/Dell-Vostro/dell-vostro-3750-screen-replacement-chiangmai.webp",
