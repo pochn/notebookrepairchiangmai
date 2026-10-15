@@ -1,6 +1,14 @@
 {
   "repairs": [
     {
+      "id": "repair-3690",
+      "brand": "Lenovo",
+      "title": "Lenovo Ideapad 305-15IBD",
+      "symptom": "Lenovo เปิดไม่ติด เครื่องเปิดไม่ติด ไฟไม่เข้าเครื่อง เงียบสนิท ชาร์จไม่เข้า",
+      "image": "images/lenovo/lenovo-ideapad-305-15ibd/lenovo-ideapad-305-15ibd-after-oca.webp",
+      "link": "articles/lenovo-ideapad-305-15ibd-repair-chiangmai.html"
+    },
+    {
       "id": "repair-5511",
       "brand": "ASUS",
       "title": "ASUS TUF Dash F15 FX516PR",
