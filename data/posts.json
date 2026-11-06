@@ -1,6 +1,14 @@
 {
   "repairs": [
     {
+      "id": "repair-1794",
+      "brand": "Laptop",
+      "title": " ASUS TUF Gaming F15 (FX506LH-HN002T)",
+      "symptom": "​สัญญาณ Wi-Fi หลุดบ่อยมาก",
+      "image": "images/laptop/-asus-tuf-gaming-f15-fx506lh-hn002t-/-asus-tuf-gaming-f15-fx506lh-hn002t--after-z5k.webp",
+      "link": "articles/-asus-tuf-gaming-f15-fx506lh-hn002t-repair-chiangmai.html"
+    },
+    {
       "id": "repair-3690",
       "brand": "Lenovo",
       "title": "Lenovo Ideapad 305-15IBD",
